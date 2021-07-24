@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pedro Arevalo</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="pedro.css">
+</head>
+<body>
+
+
+
+	<!--
+		BARRA DE NAVEGAÇÃO FIXA
+	-->
+	<div id="iframe"></div>
+	<div id="tudo">
+	<header>
+		<img src="img/logo-v2.png" width="220" height="65" alt="logo" class="navLogo">
+		<nav class="navBar">
+			<ul class="navList">
+				<li class="navList_item"><a href="pedro.html" class="navList_itemLink">Home</a></li>
+				<li class="navList_item"><a href="#servicos" class="navList_itemLink">Serviços</a></li>
+				<li class="navList_item"><a href="#sobre" class="navList_itemLink">Sobre</a></li>
+				<li class="navList_item"><a href="#contato" class="navList_itemLink">Contato</a></li>
+			</ul>
+			<button id="navButton" class="navButtonShow-mobile">
+				<span class="hamburger"></span>
+			</button>
+		</nav>
+	</header>
+
+	
+
+	<!--
+		APRESENTAÇÃO/ CONVITE
+	-->
+	<div class="container">
+		<section id="principal">
+			<div class="row">
+				<div class="topContent col">
+					<div class="top-fundoText">
+						<div class="opacidade">
+							<h1 class="topText">Dev Pedro Arevalo</h1>
+							<h2 class="topSubText">Promova o seu negó&shy;cio obtendo co&shy;migo o seu pró&shy;prio site profis&shy;sional</h2>
+						</div>
+					</div>
+					<button id="botao" class="topButton">Começar agora</button>
+				</div>
+				<figure class="topImage col">
+					<img src="img/responsiveLayout-big.png" alt="gráfico de um layout ilustrativo"/>
+				</figure>
+			</div>
+			<hr class="divisoria topDivisoria"></hr>
+		</section>
+
+
+
+		<!--
+			SERVIÇOS
+		-->
+		<section id="servicos">
+			<h2 class="sectTitle">Serviços</h2>
+			<div class="row serConteudo"> <!-- Pai Flex -->
+				<div class="col ser-colPrinc">
+					<article>
+						<h3 class="serSub-Titulo">Desenvolvimento e Manutenção de Sites</h3>
+						<p class="serTexto">Atualmente, me dedico no front-side (lado do cliente) de páginas Web, àrea responsável pela inserção de conteúdo (texto, imagens, videos etc) em sites, assim como do layout, e da interatividade que cada um desses elementos será capaz de ter com os usuários, por meio de programação em JavaScript.</p>
+						<p class="serTexto">Listado abaixo estão as tecnologias que utilizo na construção dos projetos, aplicados no front-end de páginas web:</p>
+						<ul class="serPri_lista">
+							<li><center><img src="img/html5-small.png"></center><span class="serPri_listaItem">HTML5</span></li>
+							<li><center><img src="img/css3-small.png"></center><center><span class="serPri_listaItem">CSS3</span></center></li>
+							<li><center><img src="img/javascript-small.png"></center><span class="serPri_listaItem">JavaScript</span></li>
+						</ul>
+					</article>
+					<article class="serConteudo">
+						<h3 class="serSub-Titulo">Portfólio</h3>
+						<p class="serTexto">Confira meus projetos concluídos recentemente:</p>
+						<img class="portfolioImagem" src="img/portLevindo-big.png">
+					</article>
+				</div>
+
+
+				<!-- Qualidades dos sites que crio -->
+				<article class="col serQuali">
+					<h3 class="serQuali-head">Adquira um site com:</h3>
+					<div class="serQuali-row">
+						<div class="serQuali-Div">
+							<img class="serQuali-Icon" src="img/responsiveLayout-small.png">
+							<h4 class="serQuali-Title">Responsividade</h4>
+							<p class="serQuali-Text">Seu site adaptado visualmente para todas as mídias digitais (PCs, tablets, celulares, etc).</p>
+						</div>
+						<div class="serQuali-Div">
+							<img class="serQuali-Icon" src="img/interactivity-small.png">
+							<h4 class="serQuali-Title">Interatividade</h4>
+							<p class="serQuali-Text">Permite que os elementos de seu site sejam capazes de interagir com o usuário, assim como realizar outras funcio&shy;nalidades.</p>
+						</div>
+						<div class="serQuali-Div">
+							<img class="serQuali-Icon" src="img/creativeLayout-small.png">
+							<h4 class="serQuali-Title">Design Criativo</h4>
+							<p class="serQuali-Text">Incremente o visual de seu negócio através de um site com layout moderno e atrativo para seus clientes.</p>
+						</div>
+					</div>
+				</article>
+
+
+
+			</div>
+			<hr class="divisoria"></hr>
+		</section>
+
+
+
+		<!--
+			SOBRE MIM
+		-->
+		<section id="sobre">
+			<article class="sobConteudo">
+				<img src="img/pedroPic-small.png" style="display: block; margin: 0 auto .5em auto;">
+				<h2 class="sectTitle">Sobre mim</h2>
+				<p class="sobText">Me chamo Pedro Arevalo Tamayo, sou desenvolvedor Web em atuação como freelancer, e sou de Boa Vista, Roraima. Me adentrei no ramo da criação e manutenção de sites há 1 ano aproximadamente, porém, desde que o fiz, não cesso de estudar constantemente, afim de aprimorar meus conhecimentos e aplicá-los na minha rotina profissional. Neste momento, me especializo no front-side de páginas Web, sempre oferecendo o melhor de mim na execução e entrega de meus serviços.</p>
+			</article>
+			<hr class="divisoria"></hr>
+		</section>
+
+
+
+		<!--
+			CONTATO
+		-->
+		<section id="contato">
+			<div class="contConteudo">
+				<h2 class="sectTitle">Contato</h2>
+				<ul class="contLista">
+					<li class="contLista_item"><img src="img/whatsapp-small.png"><span class="contatos">(95)99164-2836</span></li>
+					<li class="contLista_item"><img src="img/email-small.png"><span class="contatos">devpedroarevalo@gmail.com</span></li>
+					<li class="contLista_item"><img src="img/linkedin-small.png"><span class="contatos">Pedro Arevalo</span></li>
+				</ul>
+			</div>
+		</section>
+	</div>
+	</div>
+
+
+	<footer>
+		<p class="footerText">&copy 2021<br/>Pedro Arevalo</p>
+	</footer>
+	<script type="text/javascript" src="JS/jqueryComp.js"></script>
+	<script type="text/javascript" src="JS/index.js"></script>
+</body>
+</html>
