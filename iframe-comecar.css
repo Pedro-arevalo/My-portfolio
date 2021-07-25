@@ -1,0 +1,91 @@
+*, *::before, *::after {
+    box-sizing: border-box;}
+@font-face{
+    font-family: Eurostile Black;
+    src: url('fonts/eurostile.otf');
+}
+body {
+    margin: 0;
+    font-family: Eurostile Black, sans-serif;
+    background: #fff;
+}
+
+img {
+    max-width: 100%;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+h1 {
+    margin-top: 50px;
+    font-family: Eurostile Black, Courier;
+    text-align: center;
+    font-size: 2.2rem;
+    color: #23424A;
+}
+
+hr {
+    margin: 2em auto 2.5em auto;
+    border-radius: 50%;
+    background-color: #23424A;
+    color: #23424A;
+    border: none;
+    height: 2px;
+    max-width: 600px;
+}
+
+.contLista {
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 500px;
+}
+.contLista_item {
+    display: flex;
+    align-items: center;
+    margin-bottom: .5em;
+}
+span.contatos {
+    font-family: Calibri;
+    font-size: 1.2rem;
+    margin-left: .5em;
+    font-weight: bold;
+    color: #23424A;
+}
+
+button {
+    display: block;
+    background-color: #4FCE5D;
+    margin: 5em auto 0 auto;
+    padding: 1em 2em;
+    border: 1px solid #435A64;
+    border-radius: 10px;
+}
+
+a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: #fff;
+    text-shadow: 1px 1px 1px #435A64;
+}
+
+@media (min-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
+        margin-top: 70px;
+    }
+    span.contatos {
+        font-size: 1.5rem;
+    }
+
+    button {
+        padding: 1.2em 2.2em;
+    }
+    a {
+        font-size: 1.5rem;
+    }
+}
