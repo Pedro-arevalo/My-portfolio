@@ -2,12 +2,11 @@
 *, *::before, *::after {
     box-sizing: border-box;}
 @font-face{
-	font-family: Eurostile Black;
-	src: url('fonts/eurostile.otf');
+	font-family: Eurostile Bold;
+	src: url('fonts/EurostileBold.ttf');
 }
 body {
-	font-family: Eurotipe, sans-serif;
-
+	font-family: Arial, sans-serif;
 	margin: 0;
 	font-size: 1.5rem;}
 section {
@@ -166,7 +165,7 @@ header {
 .topText {
 	text-align: center;
 	padding-top: 2em;
-	font-family: 'Playfair Display', Courier;
+	font-family: Eurostile Bold, Courier;
 	font-size: 2.4rem;
 	color: #072A2D;
 	text-transform: uppercase;
@@ -188,7 +187,7 @@ header {
 	border-radius: 50px;
 	padding: .8em 1.6em;
 	cursor: pointer;
-	font-family: Eurostile Black, sans-serif;
+	font-family: Eurostile Bold, sans-serif;
 }
 .topButton:hover {
 	opacity: .8;}
