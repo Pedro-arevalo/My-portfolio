@@ -75,6 +75,9 @@ img {
 	background: orange;
 	text-decoration: underline;
 }
+.iframeVoltar:hover {
+	opacity: .8;
+}
 
 /*----------BARRA DE NAVEGAÇÃO------------*/
 header {
@@ -163,7 +166,7 @@ header {
 .topText {
 	text-align: center;
 	padding-top: 2em;
-	font-family: Eurostile Black, sans-serif;
+	font-family: 'Playfair Display', Courier;
 	font-size: 2.4rem;
 	color: #072A2D;
 	text-transform: uppercase;
@@ -186,9 +189,9 @@ header {
 	padding: .8em 1.6em;
 	cursor: pointer;
 	font-family: Eurostile Black, sans-serif;
-	transition: 1s}
+}
 .topButton:hover {
-	background: #FF8C00;}
+	opacity: .8;}
 .topImage {
 	display: none;
 	margin: 0;
