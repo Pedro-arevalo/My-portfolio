@@ -1,0 +1,12 @@
+@media (max-width: 599px) {
+	.serQuali {
+		max-width: 350px;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 899px) {
+	.serConteudo {
+		max-width: 600px;
+	}
+}
