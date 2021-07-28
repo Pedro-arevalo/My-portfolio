@@ -1,12 +1,16 @@
 *, *::before, *::after {
     box-sizing: border-box;}
 @font-face{
-    font-family: Eurostile Black;
-    src: url('fonts/eurostile.otf');
+    font-family: Eurostile Bold;
+    src: url('style/fonts/EurostileBold.ttf');
+}
+@font-face {
+    font-family: Roboto;
+    src: url('fonts/Roboto-Regular.ttf');
 }
 body {
     margin: 0;
-    font-family: Eurostile Black, sans-serif;
+    font-family: Eurostile Bold, sans-serif;
     background: #fff;
 }
 
@@ -18,8 +22,8 @@ img {
     margin: 0 auto;
 }
 h1 {
+    font-family: ;
     margin-top: 50px;
-    font-family: Eurostile Black, Courier;
     text-align: center;
     font-size: 2.2rem;
     color: #23424A;
@@ -61,6 +65,7 @@ button {
     padding: 1em 2em;
     border: 1px solid #435A64;
     border-radius: 10px;
+    border: none;
 }
 button:hover {
     opacity: .8;
