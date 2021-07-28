@@ -5,7 +5,16 @@
 	}
 }
 
-@media (max-width: 899px) {
+@media (max-width: 900px) {
+	section {
+		padding: 1em 0 0 0;
+	}
+	.opacidade {
+		background: rgba(255, 255, 255, .8);
+	}
+	.container {
+		padding: 1em;
+	}
 	.serConteudo {
 		max-width: 600px;
 	}
