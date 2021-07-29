@@ -1,12 +1,32 @@
 @media (max-width: 599px) {
+	/*SERVIÇOS*/
+	.serPri_listaItem {
+		font-size: 1rem;
+	}
 	.serQuali {
 		max-width: 350px;
 		margin: 0 auto;
 	}
+	.serQuali-Div + .serQuali-Div {
+		margin: 2.5em 0 0 0;
+	}
 }
 
 @media (max-width: 899px) {
+	/*GERAL*/
+	section {
+		padding: 1em 0 0 0;
+	}
+	.container {
+		padding: 1em;
+	}
+	.opacidade {
+	background: rgba(255, 255, 255, .8);}
+	/*SERVIÇOS*/
 	.serConteudo {
 		max-width: 600px;
+	}
+	.portfolioImagem {
+		margin: 1em auto 2em auto;
 	}
 }
