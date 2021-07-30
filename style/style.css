@@ -9,19 +9,24 @@
 	font-family: Roboto;
 	src: url('fonts/Roboto-Regular.ttf');
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
 body {
 	font-family: Roboto, sans-serif;
 	margin: 0;
 	font-size: 1.5rem;
 }
 .container {
-	max-width: 1100px;
+	max-width: 1250px;
 	margin: 0 auto;
 }
 h1, h2, h3, h4 {
 	margin: 0;
 }
 .sectTitle {
+	font-family: Eurostile Bold, sans-serif;
 	text-align: center;
 	font-size: 2.5rem;
 	color: #072A2D;
@@ -83,7 +88,8 @@ header {
 	width: 100%;
 	position: fixed;
 	background: linear-gradient(to top, #336666, #66cccc 200%);
-	z-index: 1;}
+	z-index: 1;
+}
 /*LOGO*/
 .navLogo {
 	position: absolute;
@@ -97,65 +103,25 @@ header {
 	padding: .2em 0;
 	min-height: 90px;
 }
-/*Botón de acceso al menu (mobile)*/
-.navButtonShow-mobile {
-	cursor: pointer;
-	border: 0;
-	width: 3em;
-	height: 3em;
-	padding: 0em;
-	border-radius: 50%;
-	background: #072A2D;
-	color: white;
-	transition: opacity 250ms ease;
-	position: absolute;
-	right: 15px;
-	top: 20px;}
-.navButtonShow-mobile:focus,
-.navButtonShow-mobile:hover {
-	opacity: .75;}
-.hamburger {
-    width: 50%;
-    position: relative;}
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-    display: block;
-    margin: 0 auto;
-    height: 3px;
-    background: white;}
-.hamburger::before,
-.hamburger::after {
-    content: '';
-    width: 100%;}
-.hamburger::before {
-    transform: translateY(-6px);}
-.hamburger::after {
-    transform: translateY(3px);}
+
 /*Lista de Itenes del menu*/
-.navList { /**/
-	padding-left: 40%;
+.navList {
 	list-style: none;
+	padding: 0;
 }
-.navListShowed-mobile {
-	visibility: visible;
-	height: auto;
-	list-style: none;
-	padding: 2em 0 0 0;
-	text-align: center;}
-.navList_item {
-	margin-top: .3em;}
+
 .navList_itemLink {
 	text-decoration: none;
 	color: #fff;}
 .navList_itemLink:hover,
 .navList_itemLink:focus {
 	outline: none;
-	color: #072A2D;}
+	color: #072A2D;
+}
 
 /*--------------PRIMEIRA SEÇÃO: APRESENTAÇÃO--------------*/
-.topContent {
-	margin: 2em 0 0 0;
+section#principal {
+	padding: 5em 0 0 0;
 }
 .top-fundoText {
 	background-image: url('../img/layout-medium.png');
@@ -166,7 +132,6 @@ header {
 	background: rgba(255, 255, 255, 1);
 }
 .TopOla {
-	padding-top: 2em;
 	font-size: 1.5rem;
 	color: #072A2D;
 }
@@ -208,8 +173,8 @@ header {
 	margin: 1em auto 0 auto;
 }
 .serSub-Titulo {
-	font-family: 'Playfair Display', serif;
-	color: #136C72;
+	font-family: Eurostile Bold, serif;
+	color: darkorange;
 	text-align: center;
 }
 .serTexto {
@@ -310,30 +275,29 @@ footer {
 	header {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;}
+		align-items: center;
+	}
 	.navLogo {
 		position: static;
 		margin-left: .5em;}
-	.navBar {
-		padding: .2em 1em .2em 0}
 	.navButtonShow-mobile {
 		display: none;}
-	.navListShowed-mobile {
-		padding: 0;}
 	.navList {
 		visibility: visible;
+		margin: 1em 1em 1em 0;
 		height: auto;
 		display: flex;
-		list-style: none;
-		justify-content: flex-end;}
+		justify-content: flex-end;
+	}
+	.navList_item + .navList_item {
+		margin: 0 0 0 1em;
+	}
 	.navList_itemLink {
 		transition: .5s;
 	}
-	.navList_item + .navList_item {
-		margin-left: 1em;}
+
 
 	/*-------------PRIMEIRA SEÇÃO: APRESENTAÇÃO (MAIOR DE 600PX)-----------------*/
-
 
 	.topText {
 		font-size: 2.6rem;
@@ -373,11 +337,9 @@ footer {
 				padding: 3em 0 0 0;
 			}
 			.container {
-				padding: 0 2em;
+				padding: 1em 2em;
 			}
 			.row {
-				margin: 0;
-				padding: 0;
 				display: flex;
 				justify-content: space-between;
 			}
@@ -387,21 +349,19 @@ footer {
 			}
 
 			/*-------------BARRA DE NAVEGAÇÃO (MAIOR DE 900PX)-------------*/
-			.navBar {
-				padding: .2em 2em .2em 0;}
+			.navList {
+				margin: 1em 2em 1em 0;
+			}
 			.navLogo {
 				margin-left: 2em;
 			}
 			.navList_item + .navList_item {
-				margin-left: 2em;}
+				margin: 0 0 0 2em;
+			}
 			/*-------------PRIMEIRA SEÇÃO: APRESENTAÇÃO (MAIOR DE 900PX)-----------*/
 			.topContent {
-				margin-top: 0;
-				margin-left: 3em;
-				margin-right: 0;
-				margin-bottom: 0;
-				align-self: center;
 				width: 60%;
+				align-self: center;
 			}
 			.topSubText {
 				color: #999;
@@ -411,11 +371,13 @@ footer {
 				margin-left: 3em;
 			}
 			.topImage {
-				display: initial;
+				display: block;
 				align-self: center;
 				width: 30%;
+				height: 30%;
 				margin-left: 1em;
 				max-width: 320px;
+				padding: 0;
 			}
 			/*--------------SEGUNDA SEÇÃO: SERVIÇOS (MAIOR DE 900PX)-----------------*/
 			.serConteudo {
@@ -445,7 +407,7 @@ footer {
 			}
 
 
-					@media (min-width: 1250px) {
+					/*@media (min-width: 1250px) {
 					body {
 						background: #efefef;
 					}
@@ -455,4 +417,4 @@ footer {
 						padding-bottom: 3em;
 						padding-right: 3em;
 					}
-					}
+					}*/

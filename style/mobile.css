@@ -1,4 +1,54 @@
 @media (max-width: 599px) {
+	/*BARRA DE NAVEGAÇÃO*/
+	.navButtonShow-mobile {
+		cursor: pointer;
+		border: 0;
+		width: 3em;
+		height: 3em;
+		padding: 0em;
+		border-radius: 50%;
+		background: #072A2D;
+		color: white;
+		transition: opacity 250ms ease;
+		position: absolute;
+		right: 15px;
+		top: 20px;
+	}
+	.navButtonShow-mobile:focus,
+	.navButtonShow-mobile:hover {
+		opacity: .75;
+	}
+	.hamburger {
+	    width: 50%;
+	    position: relative;
+	}
+	.hamburger,
+	.hamburger::before,
+	.hamburger::after {
+	    display: block;
+	    margin: 0 auto;
+	    height: 3px;
+	    background: white;
+	}
+	.hamburger::before,
+	.hamburger::after {
+	    content: '';
+	    width: 100%;
+	}
+	.hamburger::before {
+	    transform: translateY(-6px);
+	}
+	.hamburger::after {
+	    transform: translateY(3px);
+	}
+	.navList {
+		margin: 1em 0;
+		margin-left: 40%;
+		/*visibilidade escondida por meio do script*/
+	}
+	.navList_item + .navList_item {
+		margin: .3em 0 0 0;
+	}
 	/*SERVIÇOS*/
 	.serPri_listaItem {
 		font-size: 1rem;
@@ -20,8 +70,10 @@
 	.container {
 		padding: 1em;
 	}
+	/*OLÁ! EU SOU PEDRO AREVALO*/
 	.opacidade {
-	background: rgba(255, 255, 255, .8);}
+	background: rgba(255, 255, 255, .8);
+}
 	/*SERVIÇOS*/
 	.serConteudo {
 		max-width: 600px;
