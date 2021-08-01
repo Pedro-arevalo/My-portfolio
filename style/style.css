@@ -1,6 +1,6 @@
 /*----------GERAL------------------------*/
 *, *::before, *::after {
-    box-sizing: border-box;}
+  box-sizing: border-box;}
 @font-face{
 	font-family: Eurostile Bold;
 	src: url('fonts/EurostileBold.ttf');
@@ -8,9 +8,6 @@
 @font-face {
 	font-family: Roboto;
 	src: url('fonts/Roboto-Regular.ttf');
-}
-::-webkit-scrollbar {
-  width: 10px;
 }
 
 body {
@@ -66,7 +63,7 @@ img {
 	cursor: pointer;
 	position: absolute;
 	left: 50%;
-	transform: translate(-50%, 0);
+	transform: translateX(-50%);
 	z-index: 3;
 	padding: .6em 1em;
 	display: block;
@@ -79,7 +76,9 @@ img {
 	background: orange;
 	text-decoration: underline;
 }
-.iframeVoltar:hover {
+.iframeVoltar:hover,
+.iframeVoltar:focus {
+	outline: none;
 	opacity: .8;
 }
 /*----------BARRA DE NAVEGAÇÃO------------*/
@@ -91,12 +90,7 @@ header {
 	z-index: 1;
 }
 /*LOGO*/
-.navLogo {
-	position: absolute;
-	left: 15px;
-	top: 15px;
 
-}
 
 /*MENU*/
 .navBar {
@@ -116,7 +110,7 @@ header {
 .navList_itemLink:hover,
 .navList_itemLink:focus {
 	outline: none;
-	color: #072A2D;
+	text-decoration: underline;
 }
 
 /*--------------PRIMEIRA SEÇÃO: APRESENTAÇÃO--------------*/
@@ -160,7 +154,9 @@ section#principal {
 	cursor: pointer;
 	font-family: Eurostile Bold, sans-serif;
 }
-.topButton:hover {
+.topButton:hover,
+.topButton:focus {
+	outline: none;
 	opacity: .8;}
 .topImage {
 	display: none;
@@ -201,7 +197,6 @@ section#principal {
 	border: 1px solid black;
 }
 .serQuali {
-	font-family: 'Playfair Display', serif;
 	font-size: 1.3rem;
 	padding: 1em;
 	background: #136C72;
@@ -210,6 +205,7 @@ section#principal {
 	border-radius: 5px;
 }
 .serQuali-head {
+	font-family: Eurostile Bold, sans-serif;
 	text-align: center;
 	margin-bottom: 1.5em;
 }
@@ -265,156 +261,3 @@ footer {
 	text-align: center;
 	color: #fff;
 }
-
-	@media (min-width: 600px) {
-
-	/*------------------GERAL (MAIOR DE 600PX)--------------------*/
-
-	
-	/*-------------BARRA DE NAVEGAÇÃO (MAIOR DE 600PX)------------*/
-	header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	.navLogo {
-		position: static;
-		margin-left: .5em;}
-	.navButtonShow-mobile {
-		display: none;}
-	.navList {
-		visibility: visible;
-		margin: 1em 1em 1em 0;
-		height: auto;
-		display: flex;
-		justify-content: flex-end;
-	}
-	.navList_item + .navList_item {
-		margin: 0 0 0 1em;
-	}
-	.navList_itemLink {
-		transition: .5s;
-	}
-
-
-	/*-------------PRIMEIRA SEÇÃO: APRESENTAÇÃO (MAIOR DE 600PX)-----------------*/
-
-	.topText {
-		font-size: 2.6rem;
-		text-align: left;
-	}
-	.topSubText {
-		margin-top: .2em;
-		width: 60%;
-	}
-	.topButton {
-		margin-right: 0;
-		margin-left: 2em;
-	}
-	/*----------------SEGUNDA SEÇÃO: SERVIÇOS (MAIOR DE 600PX)-------------------*/
-
-	.serPri_listaItem {
-		font-size: 1.5rem;
-	}
-	.serQuali-row {
-		display: flex;
-		justify-content: space-between;
-	}
-	.serQuali-Div + .serQuali-Div {
-		margin: 0;
-	}
-	.serQuali-Div {
-		width: 30%;
-	}
-
-}
-
-
-			@media (min-width: 900px) {
-
-			/*------------------GERAL (MAIOR DE 900PX)--------------------*/
-			section {
-				padding: 3em 0 0 0;
-			}
-			.container {
-				padding: 1em 2em;
-			}
-			.row {
-				display: flex;
-				justify-content: space-between;
-			}
-
-			.col + .col {
-				margin-left: 2em;
-			}
-
-			/*-------------BARRA DE NAVEGAÇÃO (MAIOR DE 900PX)-------------*/
-			.navList {
-				margin: 1em 2em 1em 0;
-			}
-			.navLogo {
-				margin-left: 2em;
-			}
-			.navList_item + .navList_item {
-				margin: 0 0 0 2em;
-			}
-			/*-------------PRIMEIRA SEÇÃO: APRESENTAÇÃO (MAIOR DE 900PX)-----------*/
-			.topContent {
-				width: 60%;
-				align-self: center;
-			}
-			.topSubText {
-				color: #999;
-				width: 80%;
-			}
-			.topButton {
-				margin-left: 3em;
-			}
-			.topImage {
-				display: block;
-				align-self: center;
-				width: 30%;
-				height: 30%;
-				margin-left: 1em;
-				max-width: 320px;
-				padding: 0;
-			}
-			/*--------------SEGUNDA SEÇÃO: SERVIÇOS (MAIOR DE 900PX)-----------------*/
-			.serConteudo {
-				margin-top: 2em;
-			}
-			.ser-colPrinc {
-				width: 65%;
-			}
-			.portfolioImagem {
-				margin: 2em auto 0 auto;
-			}
-
-			.serQuali {
-				width: 35%;
-				min-width: 220px;
-				max-width: 300px;
-			}
-
-			.serQuali-row {
-				display: block;
-			}
-			.serQuali-Div {
-				width: 100%;
-			}
-			.serQuali-Div + .serQuali-Div {
-				margin: 2.5em 0 0 0;
-			}
-
-
-					/*@media (min-width: 1250px) {
-					body {
-						background: #efefef;
-					}
-					.container {
-						box-shadow: inset 0 0 10px #777777;
-						padding-left: 3em;
-						padding-bottom: 3em;
-						padding-right: 3em;
-					}
-					}*/
