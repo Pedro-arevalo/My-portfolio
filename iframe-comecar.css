@@ -67,7 +67,9 @@ button {
     border-radius: 10px;
     border: none;
 }
-button:hover {
+button:hover,
+button:focus {
+    outline: none;
     opacity: .8;
 }
 

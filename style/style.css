@@ -1,6 +1,6 @@
 /*----------GERAL------------------------*/
 *, *::before, *::after {
-    box-sizing: border-box;}
+  box-sizing: border-box;}
 @font-face{
 	font-family: Eurostile Bold;
 	src: url('fonts/EurostileBold.ttf');
@@ -9,32 +9,36 @@
 	font-family: Roboto;
 	src: url('fonts/Roboto-Regular.ttf');
 }
+
 body {
 	font-family: Roboto, sans-serif;
 	margin: 0;
-	font-size: 1.5rem;}
+	font-size: 1.5rem;
+}
 .container {
-	background: #fff;
-	max-width: 1100px;
-	margin: 0 auto;}
+	max-width: 1250px;
+	margin: 0 auto;
+}
 h1, h2, h3, h4 {
-	margin: 0;}
-h2 + h3{margin: initial;}
+	margin: 0;
+}
 .sectTitle {
-	font-weight: bolder;
+	font-family: Eurostile Bold, sans-serif;
 	text-align: center;
-	font-size: 32pt;
-	color: #072A2D;}
+	font-size: 2.5rem;
+	color: #072A2D;
+}
 img {
-	max-width: 100%;}
+	max-width: 100%;
+}
 .divisoria {
 	background: #cecece;
 	border: none;
 	height: 2px;
 	width: 100%;
 	margin: 3em auto 0 auto;
-	border-radius: 50%;}
-
+	border-radius: 50%;
+}
 #iframe {
 	position: fixed;
 	z-index: 2;
@@ -59,7 +63,7 @@ img {
 	cursor: pointer;
 	position: absolute;
 	left: 50%;
-	transform: translate(-50%, 0);
+	transform: translateX(-50%);
 	z-index: 3;
 	padding: .6em 1em;
 	display: block;
@@ -72,7 +76,9 @@ img {
 	background: orange;
 	text-decoration: underline;
 }
-.iframeVoltar:hover {
+.iframeVoltar:hover,
+.iframeVoltar:focus {
+	outline: none;
 	opacity: .8;
 }
 /*----------BARRA DE NAVEGAÇÃO------------*/
@@ -81,86 +87,45 @@ header {
 	width: 100%;
 	position: fixed;
 	background: linear-gradient(to top, #336666, #66cccc 200%);
-	z-index: 1;}
-/*LOGO*/
-.navLogo {
-	position: absolute;
-	left: 15px;
-	top: 15px;
-
+	z-index: 1;
 }
+/*LOGO*/
+
 
 /*MENU*/
 .navBar {
 	padding: .2em 0;
 	min-height: 90px;
 }
-/*Botón de acceso al menu (mobile)*/
-.navButtonShow-mobile {
-	cursor: pointer;
-	border: 0;
-	width: 3em;
-	height: 3em;
-	padding: 0em;
-	border-radius: 50%;
-	background: #072A2D;
-	color: white;
-	transition: opacity 250ms ease;
-	position: absolute;
-	right: 15px;
-	top: 20px;}
-.navButtonShow-mobile:focus,
-.navButtonShow-mobile:hover {
-	opacity: .75;}
-.hamburger {
-    width: 50%;
-    position: relative;}
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-    display: block;
-    margin: 0 auto;
-    height: 3px;
-    background: white;}
-.hamburger::before,
-.hamburger::after {
-    content: '';
-    width: 100%;}
-.hamburger::before {
-    transform: translateY(-6px);}
-.hamburger::after {
-    transform: translateY(3px);}
+
 /*Lista de Itenes del menu*/
-.navList { /**/
-	padding-left: 40%;
+.navList {
 	list-style: none;
+	padding: 0;
 }
-.navListShowed-mobile {
-	visibility: visible;
-	height: auto;
-	list-style: none;
-	padding: 2em 0 0 0;
-	text-align: center;}
-.navList_item {
-	margin-top: .3em;}
+
 .navList_itemLink {
 	text-decoration: none;
 	color: #fff;}
 .navList_itemLink:hover,
 .navList_itemLink:focus {
 	outline: none;
-	color: #072A2D;}
+	text-decoration: underline;
+}
 
 /*--------------PRIMEIRA SEÇÃO: APRESENTAÇÃO--------------*/
-.topContent {
-	margin-top: 2em;
+section#principal {
+	padding: 5em 0 0 0;
 }
 .top-fundoText {
 	background-image: url('../img/layout-medium.png');
 	background-repeat: no-repeat;
-	background-position: center center;}
+	background-position: center center;
+}
+.opacidade {
+	background: rgba(255, 255, 255, 1);
+}
 .TopOla {
-	padding-top: 2em;
 	font-size: 1.5rem;
 	color: #072A2D;
 }
@@ -189,7 +154,9 @@ header {
 	cursor: pointer;
 	font-family: Eurostile Bold, sans-serif;
 }
-.topButton:hover {
+.topButton:hover,
+.topButton:focus {
+	outline: none;
 	opacity: .8;}
 .topImage {
 	display: none;
@@ -199,13 +166,11 @@ header {
 
 /*---------------SEGUNDA SEÇÃO: SERVIÇOS--------------------*/
 .serConteudo {
-	margin-top: 1em;
-	margin: 0 auto;
-
+	margin: 1em auto 0 auto;
 }
 .serSub-Titulo {
-	font-family: 'Playfair Display', serif;
-	color: #136C72;
+	font-family: Eurostile Bold, serif;
+	color: darkorange;
 	text-align: center;
 }
 .serTexto {
@@ -213,29 +178,26 @@ header {
 	margin-top: 1em;
 	margin-bottom: .5em;
 }
-.serTexto + .serTexto {
-	margin-top: 0;
-	margin-bottom: 2em;
-}
+
 .serPri_lista {
+	margin-top: 2em;
 	display: flex;
 	justify-content: space-around;
 	list-style: none;
 	padding: 0 0 2em 0;
 }
 .serPri_listaItem {
-	font-size: 1rem;
 	text-align: center;
-	color: #444;
+	color: #666370;
+	text-shadow: 1px 1px 1px #888;
 }
 
 .portfolioImagem {
 	display: block;
-	margin: 1em auto 2em auto;
 	border: 1px solid black;
 }
 .serQuali {
-	font-family: 'Playfair Display', serif;
+	font-size: 1.3rem;
 	padding: 1em;
 	background: #136C72;
 	color: #fff;
@@ -243,11 +205,11 @@ header {
 	border-radius: 5px;
 }
 .serQuali-head {
+	font-family: Eurostile Bold, sans-serif;
 	text-align: center;
 	margin-bottom: 1.5em;
 }
 .serQuali-Title {
-	font-family: 'Playfair Display', serif;
 	margin-top: .5em;
 	text-align: center;
 }
@@ -260,9 +222,7 @@ header {
 	margin: 0 auto;
 }
 
-.serQuali-Div + .serQuali-Div {
-	margin-top: 2.5em;
-}
+
 /*----------------TERCEIRA SEÇÃO: SOBRE MIM-----------------*/
 .sobConteudo {
 	margin: 0 auto;
@@ -270,6 +230,7 @@ header {
 }
 .sobText {
 	text-align: justify;
+	margin-top: 1em;
 }
 
 /*-----------------QUARTA SEÇÃO: CONTATO--------------------*/
@@ -300,179 +261,3 @@ footer {
 	text-align: center;
 	color: #fff;
 }
-
-	@media (min-width: 600px) {
-
-	/*------------------GERAL (MAIOR DE 600PX)--------------------*/
-
-	
-	/*-------------BARRA DE NAVEGAÇÃO (MAIOR DE 600PX)------------*/
-	header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;}
-	.navLogo {
-		position: static;
-		margin-left: .5em;}
-	.navBar {
-		padding: .2em 1em .2em 0}
-	.navButtonShow-mobile {
-		display: none;}
-	.navListShowed-mobile {
-		padding: 0;}
-	.navList {
-		visibility: visible;
-		height: auto;
-		display: flex;
-		list-style: none;
-		justify-content: flex-end;}
-	.navList_itemLink {
-		transition: .5s;
-	}
-	.navList_item + .navList_item {
-		margin-left: 1em;}
-
-	/*-------------PRIMEIRA SEÇÃO: APRESENTAÇÃO (MAIOR DE 600PX)-----------------*/
-	.topContent {
-		margin-left: 2.5em;
-
-	}
-
-	.topText {
-		font-size: 2.6rem;
-		text-align: left;
-	}
-	.topSubText {
-		margin-top: .2em;
-		width: 60%;
-	}
-	.topButton {
-		margin-right: 0;
-		margin-left: 2em;
-	}
-	/*----------------SEGUNDA SEÇÃO: SERVIÇOS (MAIOR DE 600PX)-------------------*/
-	.serSub-Titulo {
-		font-weight: bold;
-		text-indent: 0;
-	}
-	.serTexto {
-		text-align: justify;
-	}
-	.serPri_listaItem {
-		font-size: 1.5rem;
-		color: #666370;
-		padding: .1em .2em;
-		text-shadow: 1px 1px 1px #888;
-	}
-	.serQuali-row {
-		display: flex;
-		justify-content: space-between;
-	}
-	.serQuali-Div + .serQuali-Div {
-		margin-top: 0;
-	}
-	.serQuali-Div {
-		width: 30%;
-	}
-
-}
-
-
-			@media (min-width: 900px) {
-
-			/*------------------GERAL (MAIOR DE 900PX)--------------------*/
-			section {
-				padding-top: 3em;
-			}
-			.opacidade {
-				background: rgba(255, 255, 255, 1);
-			}
-			.container {
-				padding-top: 2em;
-				padding-left: 2em;
-				padding-right: 2em;
-			}
-
-			.row {
-				margin: 0;
-				padding: 0;
-				display: flex;
-				justify-content: space-between;
-			}
-
-			.col + .col {
-				margin-left: 2em;
-			}
-
-			/*-------------BARRA DE NAVEGAÇÃO (MAIOR DE 900PX)-------------*/
-			.navBar {
-				padding: .2em 2em .2em 0;}
-			.navLogo {
-				margin-left: 2em;
-			}
-			.navList_item + .navList_item {
-				margin-left: 2em;}
-			/*-------------PRIMEIRA SEÇÃO: APRESENTAÇÃO (MAIOR DE 900PX)-----------*/
-			.topContent {
-				margin-top: 0;
-				margin-left: 3em;
-				margin-right: 0;
-				margin-bottom: 0;
-				align-self: center;
-				width: 60%;
-			}
-			.topSubText {
-				color: #999;
-				width: 80%;
-			}
-			.topButton {
-				margin-left: 3em;
-			}
-			.topImage {
-				display: initial;
-				align-self: center;
-				width: 30%;
-				margin-left: 1em;
-				max-width: 320px;
-			}
-			/*--------------SEGUNDA SEÇÃO: SERVIÇOS (MAIOR DE 900PX)-----------------*/
-			.serConteudo {
-				margin-top: 2em;
-			}
-			.ser-colPrinc {
-				width: 65%;
-			}
-			.portfolioImagem {
-				margin: 2em auto 0 auto;
-			}
-
-			.serQuali {
-				width: 35%;
-				min-width: 220px;
-				max-width: 300px;
-				font-size: 1.3rem;
-				
-			}
-
-			.serQuali-row {
-				display: block;
-			}
-			.serQuali-Div {
-				width: 100%;
-			}
-			.serQuali-Div + .serQuali-Div {
-				margin-top: 2.5em;
-			}
-
-
-					@media (min-width: 1250px) {
-					body {
-						background: #efefef;
-					}
-					.container {
-						box-shadow: inset 0 0 10px #777777;
-						padding-left: 3em;
-						padding-bottom: 3em;
-						padding-right: 3em;
-					}
-					}
