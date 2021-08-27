@@ -5,6 +5,10 @@ var $navButton = $('button#navButton')
 var abreMenu = true
 
 function WidthChange(media) {
+	
+	/*This makes the bar menu to not bug everytime
+	it is opened in a mobile media and switches to
+	a higher media query (600px).*/
 	function bugMenuMobileAberto(fechado) {
 		if (!fechado) {
 			$('img.navLogo').show()
@@ -16,6 +20,8 @@ function WidthChange(media) {
 		return fechado
 	}
 
+	/*Conditions to both mobile media, and the
+	ones larger than 600px.*/
 	if (media.matches) {
 		$navList.hide()
 	} else {
@@ -24,6 +30,10 @@ function WidthChange(media) {
 	}
 }
 
+/*In charge of setting how exactly the mobile
+menu should react against the user pressing
+its button (showing/ hidding + a little
+animation, for style purposes).*/
 function menuMobile(fechado) {
 	if (fechado) {
 		$('img.navLogo').hide()
@@ -42,16 +52,18 @@ function menuMobile(fechado) {
 	return fechado
 }
 
+/*Sets the media querys for mobile devices
+and to those with a higher screen (600px)*/
 if (matchMedia) {
 	const media = window.matchMedia("(max-width: 600px)")
 	media.addListener(WidthChange)
 	WidthChange(media)
 }
 
+/*The event button for the mobile dynamic menu*/
 $navButton.on('click', function() {
 	abreMenu = menuMobile(abreMenu)
 })
-
 
 
 
