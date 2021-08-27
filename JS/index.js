@@ -1,45 +1,58 @@
 //EXIBIÇÃO DO MENU EM DISPOSITIVOS MOBILE
 
-/*
-var $nav = $('ul.navList')
-$nav.hide()
-$navButton = $('button#navButton')
-$navButton.on('click', function() {
-	$('img.navLogo').fadeToggle()
-	$('.navList').toggleClass('navListShowed-mobile')
-	$nav.fadeToggle()
-})*/
 var $navList = $('ul.navList')
 var $navButton = $('button#navButton')
+var abreMenu = true
 
+function WidthChange(media) {
+	function bugMenuMobileAberto(fechado) {
+		if (!fechado) {
+			$('img.navLogo').show()
+			$('nav.navBar').animate({
+				height: '-=100px'
+			}, 0)
+			fechado = true
+		}
+		return fechado
+	}
 
-if (matchMedia) {
-	const mq = window.matchMedia("(max-width: 600px)")
-	mq.addListener(WidthChange)
-	WidthChange(mq)
+	if (media.matches) {
+		$navList.hide()
+	} else {
+		$navList.show()
+		abreMenu = bugMenuMobileAberto(abreMenu)
+	}
 }
 
-function WidthChange(mq) {
-if (mq.matches) {
-	var abreMenu = true
-	$navList.hide()
-	$navButton.on('click', function() {
-	$('img.navLogo').fadeToggle()
-	if (abreMenu == true) {
+function menuMobile(fechado) {
+	if (fechado) {
+		$('img.navLogo').hide()
+		$navList.slideDown()
 		$('nav.navBar').animate({
 			height: '+=100px'
-		}, 200, function() {
-			$navList.slideDown()
-		})
+		}, 200)
 	} else {
+		$('img.navLogo').fadeIn()
 		$navList.hide()
 		$('nav.navBar').animate({
 			height: '-=100px'
-		}, 200)
+		}, 200)	
 	}
-	abreMenu = !abreMenu
-	})
-}}
+	fechado = !fechado
+	return fechado
+}
+
+if (matchMedia) {
+	const media = window.matchMedia("(max-width: 600px)")
+	media.addListener(WidthChange)
+	WidthChange(media)
+}
+
+$navButton.on('click', function() {
+	abreMenu = menuMobile(abreMenu)
+})
+
+
 
 
 //EXIBIÇÃO DO IFRAME 'ENTRE EM CONTATO COMIGO'
@@ -79,8 +92,3 @@ var abreIframe = true
 var botao = document.getElementById('botao')
 botao.addEventListener('click', exibFrame)
 var resto = document.querySelector('div#tudo')
-
-
-
-
-
