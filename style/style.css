@@ -179,19 +179,6 @@ section#principal {
 	margin-bottom: .5em;
 }
 
-.serPri_lista {
-	margin-top: 2em;
-	display: flex;
-	justify-content: space-around;
-	list-style: none;
-	padding: 0 0 2em 0;
-}
-.serPri_listaItem {
-	text-align: center;
-	color: #666370;
-	text-shadow: 1px 1px 1px #888;
-}
-
 .portfolioImagem {
 	display: block;
 	border: 1px solid black;
@@ -222,6 +209,35 @@ section#principal {
 	margin: 0 auto;
 }
 
+/*KNOWLEDGES*/
+.knowledgeGrid {
+	display: grid;
+	margin: 1em auto 0 auto;
+	max-width: 600px;
+}
+.gridItem-1,
+.gridItem-2,
+.gridItem-3,
+.gridItem-4,
+.gridItem-5 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	border-radius: 5px;
+}
+
+.gridItem-1:hover,
+.gridItem-2:hover,
+.gridItem-3:hover,
+.gridItem-4:hover,
+.gridItem-5:hover {
+	box-shadow: 0 0 10px #777;
+	transition: .5s;
+}
+.knowledgeText {
+	text-align: center;
+	font-family: Eurostile Bold, serif;
+	}
 
 /*----------------TERCEIRA SEÇÃO: SOBRE MIM-----------------*/
 .sobConteudo {
@@ -234,6 +250,12 @@ section#principal {
 }
 
 /*-----------------QUARTA SEÇÃO: CONTATO--------------------*/
+.sectTitle_contacts {
+	font-family: Eurostile Bold, sans-serif;
+	text-align: center;
+	font-size: 2.5rem;
+	color: #ffff;
+}
 .contConteudo {
 	margin: 0 auto;
 	max-width: 500px;
@@ -244,20 +266,20 @@ section#principal {
 .contLista_item {
 	display: flex;
 	align-items: center;
-	margin-bottom: .5em;
 }
 span.contatos {
 	font-size: 1.2rem;
 	margin-left: .5em;
 	font-weight: bold;
+	color: #fff;
 }
 /*---------------------RODAPÉ-------------------------------*/
 footer {
 	width: 100%;
 	background: linear-gradient(to top, #336666, #66cccc 200%);
-	padding: 1em 0;
 }
 .footerText {
 	text-align: center;
-	color: #fff;
+	font-size: 1rem;
+	color: #ddd;
 }

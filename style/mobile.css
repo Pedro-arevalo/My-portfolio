@@ -48,7 +48,7 @@
 	}
 	.navList {
 		margin: 1em 0;
-		margin-left: 40%;
+		margin-left: 40%;s
 		/*visibilidade escondida por meio do script*/
 	}
 	.navList_item + .navList_item {
@@ -64,6 +64,38 @@
 	}
 	.serQuali-Div + .serQuali-Div {
 		margin: 2.5em 0 0 0;
+	}
+	/*KNOWLEDGES*/
+	.knowledgeGrid {
+		grid-template-columns: repeat(8,1fr);
+		grid-column-gap: 20px;
+		grid-row-gap: 20px;
+		grid-auto-rows: 120px;
+		padding: 10px;
+	}
+	.gridItem-1 {
+		grid-column-start: 1;
+		grid-column-end: 5;
+	}
+	.gridItem-2 {
+		grid-column-start: 5;
+		grid-column-end: 9;
+	}
+	.gridItem-3 {
+		grid-column-start: 1;
+		grid-column-end: 5;
+	}
+	.gridItem-4 {
+		grid-column-start: 5;
+		grid-column-end: 9;
+	}
+	.gridItem-5 {
+		grid-column-start: 3;
+		grid-column-end: 7;
+	}
+	.gridIcons {
+		display: block;
+		margin: 0 auto;
 	}
 }
 
@@ -144,6 +176,38 @@
 	}
 	.serQuali-Div {
 		width: 30%;
+	}
+	/*KNOWLEDGES*/
+	.knowledgeGrid {
+		grid-template-columns: repeat(12,1fr);
+		grid-column-gap: 20px;
+		grid-row-gap: 40px;
+		grid-auto-rows: 120px;
+		padding: 10px;
+	}
+	.gridItem-1 {
+		grid-column-start: 1;
+		grid-column-end: 5;
+	}
+	.gridItem-2 {
+		grid-column-start: 5;
+		grid-column-end: 9;
+	}
+	.gridItem-3 {
+		grid-column-start: 9;
+		grid-column-end: 13;
+	}
+	.gridItem-4 {
+		grid-column-start: 3;
+		grid-column-end: 7;
+	}
+	.gridItem-5 {
+		grid-column-start: 7;
+		grid-column-end: 11;
+	}
+	.gridIcons {
+		display: block;
+		margin: 0 auto;
 	}
 
 }
