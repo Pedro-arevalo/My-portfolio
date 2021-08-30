@@ -70,7 +70,6 @@
 		grid-template-columns: repeat(8,1fr);
 		grid-column-gap: 20px;
 		grid-row-gap: 20px;
-		grid-auto-rows: 120px;
 		padding: 10px;
 	}
 	.gridItem-1 {
@@ -93,10 +92,6 @@
 		grid-column-start: 3;
 		grid-column-end: 7;
 	}
-	.gridIcons {
-		display: block;
-		margin: 0 auto;
-	}
 }
 
 @media (max-width: 899px) {
@@ -117,6 +112,10 @@
 	}
 	.portfolioImagem {
 		margin: 1em auto 2em auto;
+	}
+	/*KNOWLEDGES*/
+	.knowledgeGrid {
+		max-width: 600px;
 	}
 }
 
@@ -180,10 +179,10 @@
 	/*KNOWLEDGES*/
 	.knowledgeGrid {
 		grid-template-columns: repeat(12,1fr);
-		grid-column-gap: 20px;
 		grid-row-gap: 40px;
-		grid-auto-rows: 120px;
-		padding: 10px;
+		background: #d2d2cb;
+		grid-column-gap: 20px;
+		padding: 20px;
 	}
 	.gridItem-1 {
 		grid-column-start: 1;
@@ -205,11 +204,6 @@
 		grid-column-start: 7;
 		grid-column-end: 11;
 	}
-	.gridIcons {
-		display: block;
-		margin: 0 auto;
-	}
-
 }
 
 
@@ -291,3 +285,5 @@
 			.serQuali-Div + .serQuali-Div {
 				margin: 2.5em 0 0 0;
 			}
+			/*KNOWLEDGES*/
+		}

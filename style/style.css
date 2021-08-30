@@ -36,7 +36,7 @@ img {
 	border: none;
 	height: 2px;
 	width: 100%;
-	margin: 3em auto 0 auto;
+	margin: 2em auto 1em auto;
 	border-radius: 50%;
 }
 #iframe {
@@ -212,8 +212,10 @@ section#principal {
 /*KNOWLEDGES*/
 .knowledgeGrid {
 	display: grid;
-	margin: 1em auto 0 auto;
 	max-width: 600px;
+	grid-auto-rows: 130px;
+	margin: 1em auto 0 auto;
+	border-radius: 5px;
 }
 .gridItem-1,
 .gridItem-2,
@@ -231,13 +233,18 @@ section#principal {
 .gridItem-3:hover,
 .gridItem-4:hover,
 .gridItem-5:hover {
-	box-shadow: 0 0 10px #777;
 	transition: .5s;
+	box-shadow: 3px 3px 10px #777;
+	background: #fff;
 }
+.gridIcons {
+		display: block;
+		margin: 0 auto;
+	}
 .knowledgeText {
 	text-align: center;
 	font-family: Eurostile Bold, serif;
-	}
+}
 
 /*----------------TERCEIRA SEÇÃO: SOBRE MIM-----------------*/
 .sobConteudo {
