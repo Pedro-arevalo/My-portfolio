@@ -1,4 +1,4 @@
-/*----------GERAL------------------------*/
+/*GLOBAL*/
 *, *::before, *::after {
   box-sizing: border-box;}
 @font-face{
@@ -81,7 +81,7 @@ img {
 	outline: none;
 	opacity: .8;
 }
-/*----------BARRA DE NAVEGAÇÃO------------*/
+/*NAV-BAR*/
 header {
 	font-family: Calibri, sans-serif;
 	width: 100%;
@@ -103,7 +103,6 @@ header {
 	list-style: none;
 	padding: 0;
 }
-
 .navList_itemLink {
 	text-decoration: none;
 	color: #fff;}
@@ -113,7 +112,7 @@ header {
 	text-decoration: underline;
 }
 
-/*--------------PRIMEIRA SEÇÃO: APRESENTAÇÃO--------------*/
+/*HEAD-SECTION*/
 section#principal {
 	padding: 5em 0 0 0;
 }
@@ -164,7 +163,7 @@ section#principal {
 }
 
 
-/*---------------SEGUNDA SEÇÃO: SERVIÇOS--------------------*/
+/*SERVICES*/
 .serConteudo {
 	margin: 1em auto 0 auto;
 }
@@ -217,22 +216,13 @@ section#principal {
 	margin: 1em auto 0 auto;
 	border-radius: 5px;
 }
-.gridItem-1,
-.gridItem-2,
-.gridItem-3,
-.gridItem-4,
-.gridItem-5 {
+.gridItem {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	border-radius: 5px;
 }
-
-.gridItem-1:hover,
-.gridItem-2:hover,
-.gridItem-3:hover,
-.gridItem-4:hover,
-.gridItem-5:hover {
+.gridItem:hover {
 	transition: .5s;
 	box-shadow: 3px 3px 10px #777;
 	background: #fff;
@@ -246,7 +236,7 @@ section#principal {
 	font-family: Eurostile Bold, serif;
 }
 
-/*----------------TERCEIRA SEÇÃO: SOBRE MIM-----------------*/
+/*ABOUT-ME*/
 .sobConteudo {
 	margin: 0 auto;
 	max-width: 500px;
@@ -256,7 +246,11 @@ section#principal {
 	margin-top: 1em;
 }
 
-/*-----------------QUARTA SEÇÃO: CONTATO--------------------*/
+/*FOOTER/CONTACTS*/
+footer {
+	width: 100%;
+	background: linear-gradient(to top, #336666, #66cccc 200%);
+}
 .sectTitle_contacts {
 	font-family: Eurostile Bold, sans-serif;
 	text-align: center;
@@ -279,11 +273,6 @@ span.contatos {
 	margin-left: .5em;
 	font-weight: bold;
 	color: #fff;
-}
-/*---------------------RODAPÉ-------------------------------*/
-footer {
-	width: 100%;
-	background: linear-gradient(to top, #336666, #66cccc 200%);
 }
 .footerText {
 	text-align: center;

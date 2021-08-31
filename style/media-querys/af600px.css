@@ -1,0 +1,89 @@
+@media (min-width: 600px) {
+	/*0-----------600xxxxx900xxxxx
+	GLOBAL*/
+
+	/*0-----------600xxxxx900xxxxx
+	NAV-BAR*/
+	header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.navLogo {
+		position: static;
+		margin-left: .6em;;
+	}
+	.navButtonShow-mobile {
+		display: none;
+	}
+	.navList {
+		visibility: visible;
+		margin: 1em 1em 1em 0;
+		height: auto;
+		display: flex;
+		justify-content: flex-end;
+	}
+	.navList_item + .navList_item {
+		margin: 0 0 0 1em;
+	}
+	/*0-----------600xxxxx900xxxxx
+	HEAD-SECTION*/
+
+	.topText {
+		font-size: 2.6rem;
+		text-align: left;
+	}
+	.topSubText {
+		margin-top: .2em;
+		width: 60%;
+	}
+	.topButton {
+		margin-right: 0;
+		margin-left: 2em;
+	}
+	/*0-----------600xxxxx900xxxxx
+	SERVICES*/
+
+	.serPri_listaItem {
+		font-size: 1.5rem;
+	}
+	.serQuali-row {
+		display: flex;
+		justify-content: space-between;
+	}
+	.serQuali-Div + .serQuali-Div {
+		margin: 0;
+	}
+	.serQuali-Div {
+		width: 30%;
+	}
+	/*0-----------600xxxxx900xxxxx
+	KNOWLEDGES*/
+	.knowledgeGrid {
+		grid-template-columns: repeat(12,1fr);
+		grid-row-gap: 40px;
+		background: #d2d2cb;
+		grid-column-gap: 20px;
+		padding: 20px;
+	}
+	.gridItem-1 {
+		grid-column-start: 1;
+		grid-column-end: 5;
+	}
+	.gridItem-2 {
+		grid-column-start: 5;
+		grid-column-end: 9;
+	}
+	.gridItem-3 {
+		grid-column-start: 9;
+		grid-column-end: 13;
+	}
+	.gridItem-4 {
+		grid-column-start: 3;
+		grid-column-end: 7;
+	}
+	.gridItem-5 {
+		grid-column-start: 7;
+		grid-column-end: 11;
+	}
+}

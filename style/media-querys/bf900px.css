@@ -1,0 +1,25 @@
+@media (max-width: 899px) {
+	/*0xxxxxxxxxxx600xxxxx900-----
+	GLOBAL*/
+	section {
+		padding: 1em 0 0 0;
+	}
+	.container {
+		padding: 1em;
+	}
+	/*0xxxxxxxxxxx600xxxxx900-----
+	HEAD-SECTION*/
+	.opacidade {
+	background: rgba(255, 255, 255, .8);
+}
+	/*0xxxxxxxxxxx600xxxxx900-----
+	SERVICES*/
+	.serConteudo {
+		max-width: 600px;
+	}
+	.portfolioImagem {
+		margin: 1em auto 2em auto;
+	}
+	/*0xxxxxxxxxxx600xxxxx900-----
+	KNOWLEDGES*/
+}
