@@ -89,16 +89,10 @@ header {
 	background: linear-gradient(to top, #336666, #66cccc 200%);
 	z-index: 1;
 }
-/*LOGO*/
-
-
-/*MENU*/
 .navBar {
 	padding: .2em 0;
 	min-height: 90px;
 }
-
-/*Lista de Itenes del menu*/
 .navList {
 	list-style: none;
 	padding: 0;
@@ -162,7 +156,6 @@ section#principal {
 	margin: 0;
 }
 
-
 /*SERVICES*/
 .serConteudo {
 	margin: 1em auto 0 auto;
@@ -177,7 +170,6 @@ section#principal {
 	margin-top: 1em;
 	margin-bottom: .5em;
 }
-
 .portfolioImagem {
 	display: block;
 	border: 1px solid black;
@@ -211,9 +203,8 @@ section#principal {
 /*KNOWLEDGES*/
 .knowledgeGrid {
 	display: grid;
-	max-width: 600px;
 	grid-auto-rows: 130px;
-	margin: 1em auto 0 auto;
+	margin: 2em auto 0 auto;
 	border-radius: 5px;
 }
 .gridItem {
@@ -221,11 +212,11 @@ section#principal {
 	flex-direction: column;
 	justify-content: space-around;
 	border-radius: 5px;
+	transition: .5s;
 }
 .gridItem:hover {
-	transition: .5s;
-	box-shadow: 3px 3px 10px #777;
-	background: #fff;
+	box-shadow: 3px 3px 10px #555;
+	/*background: #fff;*/
 }
 .gridIcons {
 		display: block;

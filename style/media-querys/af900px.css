@@ -78,4 +78,11 @@
 	}
 	/*0-----------600-----900xxxxx
 	KNOWLEDGES*/
+	.knowledgeGrid {
+		grid-auto-rows: 150px;
+		max-width: 800px;
+	}
+	.gridItem {
+		padding: 15px;
+	}
 }
