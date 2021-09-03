@@ -2,7 +2,7 @@
 
 var $navList = $('ul.navList')
 var $navButton = $('button#navButton')
-var abreMenu = true
+var abreMenu = true //this will be the validation for the mobile button to work properly
 
 function WidthChange(media) {
 	

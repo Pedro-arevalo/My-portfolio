@@ -230,7 +230,11 @@ section#principal {
 /*ABOUT-ME*/
 .sobConteudo {
 	margin: 0 auto;
-	max-width: 500px;
+	max-width: 600px;
+}
+.sobConteudo img {
+	display: block;
+	margin: 0 auto 1em auto;
 }
 .sobText {
 	text-align: justify;
