@@ -24,8 +24,10 @@ function WidthChange(media) {
 	ones larger than 600px.*/
 	if (media.matches) {
 		$navList.hide()
+		alert('menor de 600px')
 	} else {
 		$navList.show()
+		alert('maior de 600px')
 		abreMenu = bugMenuMobileAberto(abreMenu)
 	}
 }
@@ -55,7 +57,7 @@ function menuMobile(fechado) {
 /*Sets the media querys for mobile devices
 and to those with a higher screen (600px)*/
 if (matchMedia) {
-	const media = window.matchMedia("(max-width: 600px)")
+	const media = window.matchMedia("(max-width: 599px)")
 	media.addListener(WidthChange)
 	WidthChange(media)
 }

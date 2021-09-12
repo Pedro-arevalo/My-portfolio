@@ -48,7 +48,6 @@
 	}
 	.navList {
 		margin: 1em 0;
-		margin-left: 40%;s
 		/*visibilidade escondida por meio do script*/
 	}
 	.navList_item + .navList_item {
