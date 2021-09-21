@@ -47,6 +47,21 @@
 	.serPri_listaItem {
 		font-size: 1.5rem;
 	}
+
+
+
+	
+	#portfolio {
+		display: flex;
+		justify-content: space-between;
+	}
+	.card {
+		width: 48%;
+	}
+
+
+
+
 	.serQuali-row {
 		display: flex;
 		justify-content: space-between;
@@ -57,6 +72,11 @@
 	.serQuali-Div {
 		width: 30%;
 	}
+
+
+
+
+
 	/*0-----------600xxxxx900xxxxx
 	KNOWLEDGES*/
 	.knowledgeGrid {
@@ -94,5 +114,12 @@
 		grid-column-start: 7;
 		grid-column-end: 11;
 
+	}
+
+
+
+
+	.footerText {
+		margin-top: 3em;
 	}
 }

@@ -57,9 +57,24 @@
 	.ser-colPrinc {
 		width: 65%;
 	}
-	.portfolioImagem {
-		margin: 2em auto 0 auto;
+
+
+	#portfolio {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 1.5em;
 	}
+	.card {
+		width: 48%;
+	}
+
+
+
+
+
+
+
+
 	.serQuali {
 		width: 35%;
 		min-width: 220px;
@@ -84,5 +99,17 @@
 	}
 	.gridItem {
 		padding: 15px;
+	}
+	/*0-----------600-----900xxxxx
+	ABOUT-ME*/
+	.sobConteudo {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.sobConteudo div {
+		margin-left: 1.5em;
+		max-width: 600px;
+		
 	}
 }

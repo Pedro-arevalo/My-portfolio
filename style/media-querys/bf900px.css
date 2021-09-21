@@ -17,9 +17,24 @@
 	.serConteudo {
 		max-width: 600px;
 	}
-	.portfolioImagem {
-		margin: 1em auto 2em auto;
+
+	#portfolio {
+		margin-bottom: 2em;
 	}
+
+
 	/*0xxxxxxxxxxx600xxxxx900-----
 	KNOWLEDGES*/
+	.gridItem {
+		padding: 10px;
+	}
+	/*0xxxxxxxxxxx600xxxxx900-----
+	ABOUT-ME*/
+	.sobConteudo {
+		margin: 0 auto;
+		max-width: 600px;
+	}
+	.sobConteudo img {
+		margin: 0 auto 1em auto;
+	}
 }

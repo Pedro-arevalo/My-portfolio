@@ -13,7 +13,7 @@
 body {
 	font-family: Roboto, sans-serif;
 	margin: 0;
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 }
 .container {
 	max-width: 1200px;
@@ -170,10 +170,45 @@ section#principal {
 	margin-top: 1em;
 	margin-bottom: .5em;
 }
-.portfolioImagem {
-	display: block;
-	border: 1px solid black;
+
+#portfolio {
+	margin-top: 1.5em;
 }
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background:rgb(82, 75, 75);
+	padding: .5em .5em 1em .5em;
+	border-radius: 5px;
+	color: #fff;
+	text-align: center;
+	min-height: 340px;
+}
+
+.card h5 {
+	margin: 1em 0 0 0;
+}
+.card p {
+	color: rgba(255, 255, 255, 0.76);
+	margin: .5em 0 1em 0;
+	font-size: 1rem;
+}
+
+.card button {
+	background-color: orange;
+	border: none;
+	padding: 1em 2em;
+	font-weight: bold;
+	font-size: .9rem;
+	margin: 0 auto;
+	display: block;
+}
+
+
+
+
 .serQuali {
 	font-size: 1.3rem;
 	padding: 1em;
@@ -212,11 +247,10 @@ section#principal {
 	flex-direction: column;
 	justify-content: space-around;
 	border-radius: 5px;
-	transition: .5s;
 }
 .gridItem:hover {
 	box-shadow: 3px 3px 10px #555;
-	/*background: #fff;*/
+	transition: .5s;
 }
 .gridIcons {
 		display: block;
@@ -228,13 +262,11 @@ section#principal {
 }
 
 /*ABOUT-ME*/
-.sobConteudo {
-	margin: 0 auto;
-	max-width: 600px;
-}
+
 .sobConteudo img {
 	display: block;
-	margin: 0 auto 1em auto;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgb(82, 75, 75);
 }
 .sobText {
 	text-align: justify;
@@ -262,6 +294,9 @@ footer {
 .contLista_item {
 	display: flex;
 	align-items: center;
+}
+.contLista_item + .contLista_item {
+	margin-top: .5em;
 }
 span.contatos {
 	font-size: 1.2rem;
