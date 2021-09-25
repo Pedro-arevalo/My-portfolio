@@ -1,0 +1,321 @@
+/*GERAL*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+}
+
+img {
+	max-width: 100%;
+}
+
+h2 {
+	text-align: center;
+	margin: 0 0 .2em 0;
+	font-weight: 900;
+	font-family: 'Playfair Display', serif;
+}
+
+.container {
+	width: 85%;
+	margin: 0 auto;
+}
+
+.tit-cor {
+	color: #031d29;
+}
+
+.text-content {
+	text-align: justify;
+}
+
+
+/*TOPO*/
+.backg-top-section {
+	background: linear-gradient(to right, #f5f7f6, #000 300%);
+	border-bottom: 1px solid #031d29;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
+.top-section {
+	display: flex;
+}
+
+.top-logo {						/*Primer hijo de la row de top-section*/
+	width: 40%;
+	min-width: 220px;
+	height: 15vh;
+	min-height: 100px;
+	max-height: 150px;
+}
+.top-logo_img {
+	height: 100%;
+}
+
+.top-nav {				/*Segundo hijo de la row de top-section/ menu de navegación oculto*/
+	display: none;
+	width: 60%;
+}
+
+/*MAIN*/
+.backg-main-section {
+	background: url(img/lady-justice.jpg) no-repeat;
+	background-size: cover;
+	border-bottom: 1px solid #031d29;
+}
+
+.main-section {
+	padding: 2em 0;
+	margin: 0 auto;
+}
+
+.main-fotosala {
+	display: flex;
+	max-height: 300px;
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+/*QUEM SOMOS*/
+.backg-quemsomos {
+	background: #f5f7f6;
+	border-bottom: 1px solid #031d29;
+}
+
+.opac__backg-main-section {
+	position: relative;
+	background: rgba(255,255,255,.7);
+}
+
+.quem-somos {
+	padding: 2em 0;
+	margin: 0 auto;
+}
+
+.quem-fotoentrada_esq {
+	display: none;
+}
+
+.quem-fotoentrada_dir {
+	display: flex;
+	max-height: 300px;
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+/*RODAPÉ*/
+.backg-rodape {
+	background: url(img/recepcao.jpg) no-repeat;
+	background-size: cover;
+}
+
+.opac__backg-rodape {
+	position: relative;
+	background: rgba(255,255,255,.5);
+}
+
+.fale-conosco {
+	padding: 2em 0;
+	margin: 0 auto;
+}
+
+/*lista de informações*/
+.fale-listInfo {
+	list-style: none;
+	background: rgba(5,29,46,.7);
+	margin: 1em 0 0 0;
+	padding: .5em 1em;
+	max-width: 500px;
+	border: 1px solid #cecece;
+	font-size: 1.1rem;
+	color: #ddd;
+	}
+
+li {
+	padding: .4em 0;
+}
+
+/*lista de horarios em duas colunas*/
+.fale-listHorario {
+	display: flex;
+	justify-content: space-between;
+	max-width: 250px;
+	padding: 0;
+	list-style: none;
+	
+}
+
+.fale-mapa {
+	display: none;
+}
+
+
+/*
+=========================
+ MEDIA QUERY PARA PCs
+=========================
+*/
+@media (min-width: 800px) {
+	
+	/*MQ__GERAL*/
+	h2 {
+		text-align: left;
+	}
+	.container {
+		width: 80%;
+	}
+	
+	.row {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.col + .col {
+		margin-left: 3em;
+	}
+		
+	.sublinhado {
+		background-color: #777777;
+		height: 5px;
+		border-radius: 10px;
+		margin-bottom: 1.6em;
+	}
+	
+	/*MQ__TOPO*/
+	.top-logo {
+		height: 18vh;
+		min-height: 140px;
+	}
+
+	.top-nav {
+		display: initial;	/*Deja de ser 'none' y es expuesto para PCs*/
+	}
+
+	.listNav {		/*lista del menu*/
+		display: flex;
+		justify-content: flex-end;
+		list-style: none;
+		align-items: center;
+		height: 100%;
+		margin: 0;
+
+	}
+
+	.listNav_item + .listNav_item {
+		margin-left: 3em;
+	}
+
+	.listNav_link {			/* texto de cada iten*/
+		text-decoration: none;
+		font-size: 14pt;
+		text-transform: uppercase;
+		color: #031d29;
+		font-weight: 900;
+	}
+
+	.listNav_link:hover,
+	.listNav_link:focus {
+		color: #555;
+		outline: 0;
+	}
+	
+	/*MQ__MAIN*/
+	.backg-main-section {
+		background: url(img/lady-justice.jpg) no-repeat center left fixed;
+		background-size: cover;
+		background-position: top left;
+	}
+	
+	.main-section {
+		padding: 3em 0;
+		max-width: 1200px;
+	}
+	
+	.main-text {
+		width: 55%;
+		max-width: 600px;
+		align-self: center;
+	}
+	
+	.main-fotosala {
+		display: flex;
+		margin: initial;
+		width: 45%;
+		max-width: 450px;
+		max-height: 300px;
+		border: 1em solid #555;
+		align-self: center;
+	}
+	
+	/*MQ__QUEM SOMOS*/
+	.quem-somos {
+		padding: 3em 0;
+		max-width: 1200px;
+	}
+	
+	.quem-text {
+		width: 55%;
+		max-width: 600px;
+		align-self: center;
+	}
+	
+	.quem-fotoentrada_dir {
+		display: none;
+	}
+	
+	.quem-fotoentrada_esq {
+		display: flex;
+		margin: initial;
+		width: 45%;
+		max-width: 450px;
+		max-height: 300px;
+		border: 1em solid #555;
+		align-self: flex-start;
+	}
+	
+	/*MQ__RODAPÉ*/
+	.backg-rodape {
+		background: url(img/recepcao.jpg) no-repeat fixed;
+		background-position: top 25% left;
+		background-size: cover;
+	}
+	
+	.fale-conosco {
+		padding: 2em 0;
+		max-width: 1200px;
+	}
+	
+	.fale-sublinhado {
+		background-color: gray;
+		height: 5px;
+		border-radius: 10px;
+		margin-bottom: 1em;
+	}
+	
+	.fale-mapa {
+		display: flex;
+		justify-content: right;
+		width: 45%;
+		max-width: 450px;
+		max-height: 300px;
+		align-self: center;
+	}
+	
+	.google-maps {
+		border: 1px solid black;
+	}
+	
+	.fale-text {
+		width: 55%;
+		max-width: 600px;
+		align-self: center;
+	}
+}

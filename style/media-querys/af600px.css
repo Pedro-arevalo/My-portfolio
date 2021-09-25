@@ -43,25 +43,13 @@
 	}
 	/*0-----------600xxxxx900xxxxx
 	SERVICES*/
-
-	.serPri_listaItem {
-		font-size: 1.5rem;
-	}
-
-
-
-	
-	#portfolio {
+	.cardContainer {
 		display: flex;
 		justify-content: space-between;
 	}
 	.card {
 		width: 48%;
 	}
-
-
-
-
 	.serQuali-row {
 		display: flex;
 		justify-content: space-between;

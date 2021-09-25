@@ -45,19 +45,13 @@ img {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	margin: 0;
 	width: 90%;
 	max-width: 800px;
-	padding: 0;
 }
-
 .iframeExib {
 	width: 100%;
 	height: 500px;
-	margin: 0;
-	padding: 0;
-	border-color: #23424A;
-	border-style: solid;
+	border: 2px solid #23424A;
 }
 .iframeVoltar {
 	cursor: pointer;
@@ -67,7 +61,6 @@ img {
 	z-index: 3;
 	padding: .6em 1em;
 	display: block;
-	border-radius: 0;
 	border-top: 2px solid #23424A;
 	border-left: none;
 	border-bottom: none;
@@ -158,7 +151,7 @@ section#principal {
 
 /*SERVICES*/
 .serConteudo {
-	margin: 1em auto 0 auto;
+	margin: 0 auto;
 }
 .serSub-Titulo {
 	font-family: Eurostile Bold, serif;
@@ -170,23 +163,27 @@ section#principal {
 	margin-top: 1em;
 	margin-bottom: .5em;
 }
-
+#specs {
+	margin-top: 2em;
+}
 #portfolio {
+	margin-top: 3em;
+}
+.cardContainer {
 	margin-top: 1.5em;
 }
-
 .card {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	background:rgb(82, 75, 75);
+	/*background:rgb(82, 75, 75);*/
+	background-color:rgba(2, 51, 65, 0.575);
 	padding: .5em .5em 1em .5em;
 	border-radius: 5px;
 	color: #fff;
 	text-align: center;
 	min-height: 340px;
 }
-
 .card h5 {
 	margin: 1em 0 0 0;
 }
@@ -195,20 +192,16 @@ section#principal {
 	margin: .5em 0 1em 0;
 	font-size: 1rem;
 }
-
 .card button {
 	background-color: orange;
 	border: none;
-	padding: 1em 2em;
+	padding: .5em 1.2em;
 	font-weight: bold;
-	font-size: .9rem;
+	font-family: 'Eurostile Bold';
+	font-size: 1.2rem;
 	margin: 0 auto;
 	display: block;
 }
-
-
-
-
 .serQuali {
 	font-size: 1.3rem;
 	padding: 1em;

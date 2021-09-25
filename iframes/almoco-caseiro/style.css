@@ -1,0 +1,264 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+@font-face {
+	font-family: Pacifico;
+	src: url(fonts/pacifico.ttf)
+}
+@font-face {
+	font-family: Inconsolata;
+	src: url(fonts/inconsolata.ttf)
+}
+body{
+	font-family: Calibri;
+	font-size: 1.25rem;
+	margin: 0;
+	background-color: ;
+}
+img {
+	max-width: 100%;
+}
+
+.backg {
+	background-image: url(img/restaurant.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	color: #fff;
+}
+.hero {
+	background: rgba(158, 106, 106, 0.2);
+	min-height: 300px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+header hgroup {
+	text-align: center;
+	line-height: 5px;
+}
+header h1 {
+	font-family: Pacifico, cursive;
+	font-size: 4.2rem;
+}
+header h3 {
+	margin-top: 0;
+	font-family: Inconsolata;
+	font-weight: 200;
+	font-size: 1.6rem;
+	letter-spacing: 6px;
+	text-transform: uppercase;
+}
+nav {
+	padding: 0;
+	margin: 0;
+}
+nav ul {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+nav hr {
+	color: #fff;
+	border-style: solid;
+}
+nav li {
+	width: 100%;
+}
+nav button {
+	width: 100%;
+	border: none;
+	background: rgb(189, 79, 79);
+	padding: .8em;
+	font-size: 1rem;
+	color: #fff;
+	cursor: pointer;
+}
+
+.container {
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+section {
+	padding: 1em 0;
+}
+.sectTitle {
+	text-align: center;
+	font-family: Pacifico;
+	margin-bottom: .4em;
+	color:rgb(74, 83, 133);
+	font-size: 1.6rem;
+}
+.underlineTitle {
+	width: 80px;
+	margin: 0 auto 1.5em auto;
+	color: rgb(189, 79, 79);
+}
+section#one .data {
+	text-align: center;
+	max-width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+section#one #map {
+	display: block;
+	width: 100%;
+	max-width: 500px;
+	height: 300px;
+	margin: 0 auto;
+}
+
+section#two #menu {
+	margin: 0 auto;
+	padding: 0;
+	width:80%;
+	list-style: none;
+}
+
+section#two .aviso {
+	font-family: Inconsolata;
+	font-size: 1.4rem;
+	text-align: center;
+	color: #555;
+	max-width: 300px;
+	margin: 0 auto;
+}
+section#two span.foco {
+	color: red;
+	text-transform: uppercase;
+}
+
+#menu li {
+	background-color: #ddd;
+	padding: .5em;
+	margin: .5em 0;
+	text-align: center;
+	box-shadow: 1px 1px 1px #777;
+}
+
+section#three {
+	margin-bottom: 1.5em;
+}
+section#three .inlining {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#whatsIcon {
+	margin-right: .3em;
+}
+a#whatsapp {
+	display: block;
+	padding: .5em;
+	border: none;
+	color: white;
+	background: #25d366;
+	border-radius: 5px;
+	margin: 0 auto;
+	font-size: 1.4rem;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	max-width: 150px;
+}
+footer {
+	margin-bottom: 1.2em;
+}
+footer p {
+	text-align: center;
+	color:rgba(82, 78, 78, 0.6);
+	font-size: .9rem;
+}
+footer a {
+	color: inherit;
+}
+
+@media (min-width: 700px) {
+
+	nav ul li{
+		width: initial;
+		padding: 1em;
+	}
+	nav hr {
+		display: none;
+	}
+	nav ul {
+		background: rgb(189, 79, 79);
+		justify-content: center;
+	}
+	.navButton {
+		padding: 0;
+		font-size: 1.2rem;
+	}
+	.sectTitle {
+		font-size: 1.8rem;
+	}
+	section#one #textFlex {
+		display: flex;
+		justify-content: center;
+	}
+	section#one .card {
+		width: 45%;
+		padding: 1em;
+		margin-bottom: 1em;
+		background-color: rgba(153, 153, 153, 0.377);
+		
+		border-radius: 10px;
+	}
+	.card + .card {
+		margin-left: .5em;
+	}
+	section#one .data {
+		margin: 0;
+	}
+	section#one #map {
+		max-width: 600px;
+	}
+	div#sectionContainer {
+		display: flex;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	section#two, section#three {
+		width: 100%;
+	}
+	footer {
+		margin-bottom: 2em;
+	}
+}
+
+@media (min-width: 900px) {
+	#bigScreen-flex {
+		display: flex;
+		justify-content: space-between;
+	}
+	section#one {
+		width: 60%;
+	}
+	div#sectionContainer {
+		width: 35%;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	footer {
+		margin-top: 2.5em;
+		margin-bottom: 1.5rem;
+	}
+	footer p {
+		font-size: 1rem;
+	}
+}
+
+@media (min-width: 1000px) {
+	nav ul li {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+}
+@media (min-width: 1100px) {
+	.sectTitle {
+		font-size: 1.8rem;
+	}
+}

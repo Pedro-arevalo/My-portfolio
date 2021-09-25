@@ -75,7 +75,7 @@ function exibFrame() { //agregar os elementos iframe, e botão voltar, além de 
 		var posicao = document.getElementById('iframe') //definindo alocamento do iframe
 		var ifr = document.createElement('iframe') //criando iframe
 		var sair = document.createElement('button') //criando o botao de voltar do iframe
-		ifr.setAttribute('src', 'iframe-comecar.html') //definindo src do iframe
+		ifr.setAttribute('src', 'iframes/iframe-comecar.html') //definindo src do iframe
 		ifr.setAttribute('class', 'iframeExib') //agregando classe ao iframe
 		sair.setAttribute('class', 'iframeVoltar') //agregando classe ao botao do iframe
 		sair.innerText = 'Fechar' //definindo o escrito no botão do iframe
@@ -100,7 +100,14 @@ function saiFrame() { //deixa de exibir o iframe em questão
 	resto.style.opacity = '1' // a opacidade do resto da página volta ao normal
 }
 
+
+
 var abreIframe = true
+
+var iframeContato = 'iframes/iframe-comecar.html'
+var iframeRestaurante = 'iframes/almoco-caseiro/index.html'
+var iframeEscritorio = 'iframes/escritorio-levis/index.html'
+
+var resto = document.querySelector('div#tudo')
 var botao = document.getElementById('botao')
 botao.addEventListener('click', exibFrame)
-var resto = document.querySelector('div#tudo')

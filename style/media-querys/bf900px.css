@@ -11,18 +11,15 @@
 	HEAD-SECTION*/
 	.opacidade {
 	background: rgba(255, 255, 255, .8);
-}
+	}
 	/*0xxxxxxxxxxx600xxxxx900-----
 	SERVICES*/
 	.serConteudo {
 		max-width: 600px;
 	}
-
-	#portfolio {
+	.cardContainer {
 		margin-bottom: 2em;
 	}
-
-
 	/*0xxxxxxxxxxx600xxxxx900-----
 	KNOWLEDGES*/
 	.gridItem {

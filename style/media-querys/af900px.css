@@ -2,7 +2,7 @@
 	/*0-----------600-----900xxxxx
 	GLOBAL*/
 	section {
-		padding: 3em 0 0 0;
+		padding: 2em 0 0 0;
 	}
 	.container {
 		padding: 1em 2em;
@@ -10,7 +10,7 @@
 	.row {
 		display: flex;
 		justify-content: space-between;
-		align-items: stretch;
+		align-items: center;
 	}
 
 	.col + .col {
@@ -51,30 +51,10 @@
 	}
 	/*0-----------600-----900xxxxx
 	SERVICES*/
-	.serConteudo {
-		margin-top: 2em;
-	}
 	.ser-colPrinc {
 		width: 65%;
+
 	}
-
-
-	#portfolio {
-		display: flex;
-		justify-content: space-between;
-		margin-top: 1.5em;
-	}
-	.card {
-		width: 48%;
-	}
-
-
-
-
-
-
-
-
 	.serQuali {
 		width: 35%;
 		min-width: 220px;

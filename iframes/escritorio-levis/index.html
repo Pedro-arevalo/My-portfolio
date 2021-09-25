@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<title>Advogado Levindo Oliveira</title>
+</head>
+<body>
+	<div class="backg-top-section">
+		<div class="container">
+			<header class="top-section">
+				<div class="top-logo">
+					<img class="top-logo_img" src="img/logoSemFundo.png" alt="Logotipo"/>
+				</div>
+				<nav class="top-nav">
+					<ul class="listNav">
+						<li class="listNav_item"><a class="listNav_link" href="#main">Principal</a></li>
+						<li class="listNav_item"><a class="listNav_link" href="#quem-somos">Sobre</a></li>
+						<li class="listNav_item"><a class="listNav_link" href="#fale-conosco">Contato</a></li>
+					</ul>
+				</nav>
+			</header>
+		</div>
+	</div>
+
+	<div class="backg-main-section">
+		<div class="opac__backg-main-section">
+			<div class="container">
+				<section id="main" class="main-section row">
+					<div class="main-text col">
+						<h2 class="tit-cor">Advocacia e Consultoria Jurídica</h2>
+						<div class="sublinhado"></div>
+						<div class="text-content"><p>Lorem ipsumsit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui vivamus arcu felis bibendum ut tristique. Arcu dui vivamus arcu felis. Sociis natoque penatibus et magnis dis.</p></div>
+					</div>
+					<div class="main-fotosala col"/>
+						<img src="img/int-escritorio.png" alt="Sala de estar"/>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>	
+
+	<div class="backg-quemsomos">
+		<div class="container">
+			<section id="quem-somos" class="quem-somos row">
+				<div class="quem-fotoentrada_esq col">
+					<img src="img/escritorio.jpg" alt="Entrada do Escritório"/>
+				</div>
+				<div class="quem-text col">
+					<h2 class="tit-cor">Quem Somos</h2>
+					<div class="sublinhado"></div>
+					<div class="text-content"><p>Nosso escritório oferece expertise em diversas áreas do Direito, tendo como principal área de atuação o Direito de Família e Sucessões, com ênfase em divórcio e partilha de bens, fixação de pensão alimentícia e execução, regulamentação de guarda e convivência. Atendemos em todo o Estado de Roraima. Agende uma consulta de forma presencial ou por meio de vídeo conferência.</p></div>
+				</div>
+				<div class="quem-fotoentrada_dir col">
+					<img src="img/escritorio.jpg" alt="Entrada do Escritório"/>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	
+	<div class="backg-rodape">
+		<div class="opac__backg-rodape">
+		<div class="container">
+			<section id="fale-conosco" class="fale-conosco row">
+				<div class="fale-text col">
+					<h2 class="tit-cor">Fale Conosco</h2>
+					<div class="fale-sublinhado"></div>
+					<ul class="fale-listInfo">
+						<li class="fale-listInfo_item">Av. Capitão Júlio Bezerra, 484 Sala 05, sub-sala 02 - São Francisco</li>
+						<li class="fale-listInfo_item">levindooliveira@gmail.com</li>
+						<li class="fale-listInfo_item">(95) 4370-0762</li>
+						<li class="fale-listInfo_item">Horário de atendimento:</li>
+						<ul class="fale-listHorario">
+							<div>
+								<li>Segunda a Sexta:</li>
+								<li>Sábado:</li>
+								<li>Domingo:</li>
+							</div>
+							<div class="fale-listHorario_col2">
+								<li>8h - 18h</li>
+								<li>8h - 12h</li>
+								<li>Fechado</li>
+							</div>
+						</ul>
+					</ul>
+				</div>
+				<div class="fale-mapa col">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15939.917886145095!2d-60.67438108191044!3d2.8221233939043695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8d9305d27c0df9e3%3A0x9a30014eae44c3e3!2sLevindo%20Oliveira%20Advocacia!5e0!3m2!1spt-BR!2sbr!4v1618967886670!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				</div>
+			</section>		
+		</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var topo = document.querySelector('div.backg-top-section')
+		var marginMainSection = topo.offsetHeight
+		var main = document.querySelector('div.backg-main-section')
+		main.style.marginTop = marginMainSection + 'px'
+
+		var iframer = document.getElementById('myFrame')
+		var win = iframer.contentWindow
+		var doc = iframer.contentDocument? iframer.contentDocument: iframer.contentWindow.document
+		var elem = doc.getElementById('euaqui')
+		elem.style.textDecoration = 'underline'
+	</script>
+</body>
+</html>
