@@ -20,16 +20,15 @@
 		BARRA DE NAVEGAÇÃO FIXA
 		A
 	-->
-	<div id="iframe"></div>
-	<div id="tudo"> <!--Analisar se esse tag é necessário-->
+	<div id="all"> <!--Analisar se esse tag é necessário-->
 		<header>
 			<img src="img/logo-v2.png" width="220" height="65" alt="logo" class="navLogo">
 			<nav class="navBar">
 				<ul class="navList">
-					<li class="navList_item"><a href="pedro.html" class="navList_itemLink">Home</a></li>
-					<li class="navList_item"><a href="#servicos" class="navList_itemLink">Serviços</a></li>
-					<li class="navList_item"><a href="#sobre" class="navList_itemLink">Sobre</a></li>
-					<li class="navList_item"><a href="#contato" class="navList_itemLink">Contato</a></li>
+					<li class="navList_item"><a href="#main" class="navList_itemLink">Home</a></li>
+					<li class="navList_item"><a href="#services" class="navList_itemLink">Serviços</a></li>
+					<li class="navList_item"><a href="#about-me" class="navList_itemLink">Sobre</a></li>
+					<li class="navList_item"><a href="#contact" class="navList_itemLink">Contato</a></li>
 				</ul>
 				<button id="navButton" class="navButtonShow-mobile">
 					<span class="hamburger"></span>
@@ -41,8 +40,7 @@
 			APRESENTAÇÃO/ CONVITE
 		-->
 		<div class="container">
-
-			<section id="principal">
+			<section id="main">
 				<div class="row">
 					<div class="topContent col">
 						<div class="top-fundoText">
@@ -50,7 +48,7 @@
 								<h2 class="TopOla">Olá! Eu sou</h2>
 								<h1 class="topText">Pedro Arevalo</h1>
 								<h2 class="topSubText">Promova o seu negó&shy;cio obtendo co&shy;migo o seu pró&shy;prio site profis&shy;sional</h2>
-								<button id="botao" class="topButton">Começar agora</button>
+								<button id="b_mainIframe" class="topButton">Começar agora</button>
 							</div>
 						</div>
 					</div>
@@ -65,7 +63,7 @@
 			<!--
 				SERVIÇOS
 			-->
-			<section id="servicos">
+			<section id="services">
 				
 				<div class="row serConteudo"> <!-- Pai Flex -->
 					<div class="col ser-colPrinc">
@@ -83,7 +81,7 @@
 										<h5>Arevalo's Almoço Caseiro</h5>
 										<p>Desenvolvido em Setembro de 2021</p>
 									</div>
-									<button>Visualizar</button>
+									<button id="b_port_iframeRes">Visualizar</button>
 								</div>
 								<div class="card">
 									<div>
@@ -91,7 +89,7 @@
 										<h5>Escritório de Advocacia<br/>Levindo Oliveira</h5>
 										<p>Desenvolvido em Maio de 2021</p>
 									</div>
-									<button>Visualizar</button>
+									<button id="b_port_iframeLev">Visualizar</button>
 								</div>
 							</div>
 						</article>
@@ -144,7 +142,7 @@
 					</div>
 					<div class="gridItem gridItem-5">
 						<img class="gridIcons" src="img/icons8-git-96.png">
-						<span class="knowledgeText">GIT</span>
+						<span class="knowledgeText">Git</span>
 					</div>
 				</div>
 			</section>
@@ -176,7 +174,7 @@
 			<!--
 				CONTATO
 			-->
-			<section id="contato">
+			<section id="contact">
 				<div class="contConteudo">
 					<h2 class="sectTitle_contacts">Contato</h2>
 					<ul class="contLista">

@@ -30,10 +30,10 @@ function WidthChange(media) {
 	}
 }
 
-/*In charge of setting how exactly the mobile
-menu should react against the user pressing
-its button (showing/ hidding + a little
-animation, for style purposes).*/
+/*Setting how the mobile menu should react
+against the user pressing its button 
+(showing/ hidding + a little animation,
+for style purposes).*/
 function menuMobile(fechado) {
 	if (fechado) {
 		$('img.navLogo').hide()
@@ -66,48 +66,61 @@ $navButton.on('click', function() {
 })
 
 
-
 //EXIBIÇÃO DO IFRAME 'ENTRE EM CONTATO COMIGO'
 
-function exibFrame() { //agregar os elementos iframe, e botão voltar, além de alterar o estilo da corpo em geral, no ato
-	if (abreIframe == true) {
-		abreIframe = false //invalidando que outro iframe abra quando um ja foi aberto
-		var posicao = document.getElementById('iframe') //definindo alocamento do iframe
-		var ifr = document.createElement('iframe') //criando iframe
-		var sair = document.createElement('button') //criando o botao de voltar do iframe
-		ifr.setAttribute('src', 'iframes/iframe-comecar.html') //definindo src do iframe
-		ifr.setAttribute('class', 'iframeExib') //agregando classe ao iframe
-		sair.setAttribute('class', 'iframeVoltar') //agregando classe ao botao do iframe
-		sair.innerText = 'Fechar' //definindo o escrito no botão do iframe
-		posicao.appendChild(sair) //alocando o botão do iframe no espaço específico
-		posicao.appendChild(ifr) //alocando o iframe no espaço especifico
-		resto.style.opacity = '30%' //mudanças de estilo ao abrir o iframe
-		resto.style.transition = '1s'
-		sair.addEventListener('click', saiFrame) //se o botão 'voltar' for acionado a função saiFrame será chamada
+function showIframe(sourcePath) {
+	function closeIframe() {
+		//iframe validated to be open again
+		iframeFreeToBeDisplayed = true
+		//resetting the environment to be as it was before
+		iframeDiv.removeChild(theIframe)
+		iframeDiv.style.display = 'none'
+		iframeBackg.style.opacity = '1'
 	}
-	else {
-		alert('A janela requisitada já está sendo exibida.') //mensagem exibida se usuário tentar abrir o mesmo iframe simultâneamente
+	if (iframeFreeToBeDisplayed == true) {
+		//iframe unvalidated to be opened while there's already another one with that condition
+		iframeFreeToBeDisplayed = false
+		//setting the environment for when the iframe is displayed
+		iframeDiv.style.display = 'block'
+		iframeBackg.style.opacity = '30%'
+		iframeBackg.style.transition = '1s'
+
+		//creating the iframe
+		var theIframe = document.createElement('iframe')
+		theIframe.setAttribute('src', sourcePath)
+		theIframe.setAttribute('class', 'iframeExib')
+		iframeDiv.appendChild(theIframe)
+
+		//setting the closing button to be triggered on click
+		b_closeIframe.addEventListener('click', closeIframe)
+	} else {
+		alert('Por favor, feche esta janela antes de abrir outra.')
 	}
 }
 
-function saiFrame() { //deixa de exibir o iframe em questão
-	abreIframe = true //valida que o iframe possa ser reaberto, visto que agora será fechado
-	var ifram = document.querySelector('iframe.iframeExib') //seleciona o iframe
-	var ifbot = document.querySelector('button.iframeVoltar') //seleciona o botão do iframe
-	var espaco = document.querySelector('div#iframe') //seleciona de onde serão retirados os dois elementos
-	espaco.removeChild(ifram) // exclui o iframe
-	espaco.removeChild(ifbot) //exclui o botão do iframe
-	resto.style.opacity = '1' // a opacidade do resto da página volta ao normal
-}
+//setting the iframe environment
+	var iframeBackg = document.getElementById('all')
+		//creating the div where the iframe will be placed in
+		var iframeDiv = document.createElement('div')
+		iframeDiv.setAttribute('id', 'iframeDiv')
+		document.body.appendChild(iframeDiv)
+		//creating the button that will close the iframe
+		var b_closeIframe = document.createElement('button')
+		b_closeIframe.setAttribute('class', 'closeIframe')
+		b_closeIframe.innerText = 'Fechar'
+		iframeDiv.appendChild(b_closeIframe)
+	iframeDiv.style.display = 'none'
+//iframe validation
+var iframeFreeToBeDisplayed = true
+//iframe's source
+var mainIframe = 'iframes/iframe-comecar.html'
+var port_iframeRes = 'iframes/almoco-caseiro/index.html'
+var port_iframeLev = 'iframes/escritorio-levis/index.html'
 
-
-
-var abreIframe = true
-
-var iframeContato = 'iframes/iframe-comecar.html'
-var iframeRestaurante = 'iframes/almoco-caseiro/index.html'
-var iframeEscritorio = 'iframes/escritorio-levis/index.html'
-
-var resto = document.querySelector('div#tudo')
-var botao = document.getElementById('botao')
-botao.addEventListener('click', exibFrame)
+//each button displays a singular iframe throught a click event
+var b_mainIframe = document.getElementById('b_mainIframe')
+var b_port_iframeRes = document.getElementById('b_port_iframeRes')
+var b_port_iframeLev = document.getElementById('b_port_iframeLev')
+b_mainIframe.addEventListener('click', function(){ showIframe(mainIframe)})
+b_port_iframeRes.addEventListener('click', function(){ showIframe(port_iframeRes)})
+b_port_iframeLev.addEventListener('click', function(){ showIframe(port_iframeLev)})
