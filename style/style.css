@@ -21,10 +21,17 @@ body {
     margin: 0;
     font-size: 1.4rem;
 }
+
+section {
+    padding: 1em 0 0 0;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 1em;
 }
+
 h1,
 h2,
 h3,
@@ -36,6 +43,7 @@ h4 {
     text-align: center;
     font-size: 2.5rem;
     color: #072a2d;
+    /* color: #292b2c; */
 }
 img {
     max-width: 100%;
@@ -94,9 +102,19 @@ header {
     padding: 0.2em 0;
     min-height: 90px;
 }
+
+.navLogo {
+    position: absolute;
+    top: 0.55em;
+    left: 0.6em;
+}
 .navList {
     list-style: none;
+    margin: 1em 0 0 40%;
     padding: 0;
+}
+.navList_item + .navList_item {
+    margin: 0.3em 0 0 0;
 }
 .navList_itemLink {
     text-decoration: none;
@@ -108,6 +126,52 @@ header {
     text-decoration: underline;
 }
 
+.navButtonShow-mobile {
+    cursor: pointer;
+    border: 0;
+    width: 3em;
+    height: 3em;
+    padding: 0em;
+    border-radius: 50%;
+    background: #072a2d;
+    color: white;
+    transition: opacity 250ms ease;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+}
+.navButtonShow-mobile:focus,
+.navButtonShow-mobile:hover {
+    opacity: 0.75;
+}
+.hamburger {
+    width: 50%;
+    position: relative;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    background: white;
+}
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    width: 100%;
+}
+.hamburger::before {
+    transform: translateY(-6px);
+}
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+/* 
+
+	*/
+
 /*HEAD-SECTION*/
 section#main {
     padding: 5em 0 0 0;
@@ -118,16 +182,18 @@ section#main {
     background-position: center center;
 }
 .opacidade {
-    background: rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, 0.8);
 }
 .TopOla {
     font-size: 1.5rem;
-    color: #072a2d;
+    /* color: #072a2d; */
+    color: #292b2c;
 }
 .topText {
     font-family: Eurostile Bold, Courier;
     font-size: 2.4rem;
     color: #072a2d;
+    /* color: #292b2c; */
     text-transform: uppercase;
 }
 .topSubText {
@@ -160,8 +226,10 @@ section#main {
 }
 
 /*SERVICES*/
+
 .serConteudo {
     margin: 0 auto;
+    max-width: 600px;
 }
 .serSub-Titulo {
     font-family: Eurostile Bold, serif;
@@ -180,7 +248,11 @@ section#main {
     margin-top: 3em;
 }
 .cardContainer {
+    margin-bottom: 2em;
     margin-top: 1.5em;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .card {
     display: flex;
@@ -194,6 +266,11 @@ section#main {
     text-align: center;
     min-height: 340px;
 }
+
+.card + .card {
+    margin-top: 1em;
+}
+
 .card h5 {
     margin: 1em 0 0 0;
 }
@@ -225,7 +302,14 @@ section#main {
     color: #fff;
     text-align: justify;
     border-radius: 5px;
+    max-width: 350px;
+    margin: 0 auto;
 }
+
+.serQuali-Div + .serQuali-Div {
+    margin: 2.5em 0 0 0;
+}
+
 .serQuali-head {
     font-family: Eurostile Bold, sans-serif;
     text-align: center;
@@ -244,36 +328,87 @@ section#main {
     margin: 0 auto;
 }
 
+/* PORTFOLIO*/
+
 /*KNOWLEDGES*/
 .knowledgeGrid {
     display: grid;
     grid-auto-rows: 130px;
     margin: 2em auto 0 auto;
     border-radius: 5px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    max-width: 420px;
+    padding: 10px;
 }
+
 .gridItem {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     border-radius: 5px;
+    padding: 10px;
 }
 .gridItem:hover {
     box-shadow: 3px 3px 10px #555;
     transition: 0.5s;
 }
+
+.gridItem-1 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+.gridItem-2 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+}
+.gridItem-3 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+.gridItem-4 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+}
+.gridItem-5 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+.gridItem-6 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+}
+.gridItem-7 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+.gridItem-8 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+}
+
 .gridIcons {
     display: block;
+    height: 80px;
     margin: 0 auto;
 }
 .knowledgeText {
+    margin-top: 0.5em;
     text-align: center;
-    font-family: Eurostile Bold, serif;
+    color: #072a2d;
 }
 
 /*ABOUT-ME*/
 
+.sobConteudo {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
 .sobConteudo img {
     display: block;
+    margin: 0 auto 1em auto;
     border-radius: 10px;
     box-shadow: 0 0 10px rgb(82, 75, 75);
 }
@@ -283,38 +418,303 @@ section#main {
 }
 
 /*FOOTER/CONTACTS*/
+
 footer {
     width: 100%;
     background: linear-gradient(to top, #336666, #66cccc 200%);
 }
+
 .sectTitle_contacts {
     font-family: Eurostile Bold, sans-serif;
     text-align: center;
     font-size: 2.5rem;
     color: #ffff;
 }
+
 .contConteudo {
     margin: 0 auto;
     max-width: 500px;
 }
+
 .contLista {
     padding: 0;
 }
+
 .contLista_item {
     display: flex;
     align-items: center;
 }
+
 .contLista_item + .contLista_item {
     margin-top: 0.5em;
 }
+
 span.contatos {
     font-size: 1.2rem;
     margin-left: 0.5em;
     font-weight: bold;
     color: #fff;
 }
+
 .footerText {
     text-align: center;
     font-size: 1rem;
     color: #ddd;
+}
+
+@media (min-width: 600px) {
+    /*0-----------600xxxxx900xxxxx
+	GLOBAL*/
+
+    /*0-----------600xxxxx900xxxxx
+	NAV-BAR*/
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navLogo {
+        position: static;
+        margin-left: 0.6em;
+    }
+    .navButtonShow-mobile {
+        display: none;
+    }
+    .navList {
+        visibility: visible;
+        margin: 1em 1em 1em 0;
+        height: auto;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .navList_item + .navList_item {
+        margin: 0 0 0 1em;
+    }
+    /*0-----------600xxxxx900xxxxx
+	HEAD-SECTION*/
+    .topElements {
+        margin: 0 auto;
+        max-width: 600px;
+    }
+    .topText {
+        font-size: 2.6rem;
+        text-align: left;
+    }
+    .topSubText {
+        margin-top: 0.2em;
+        width: 60%;
+    }
+    .topButton {
+        margin-right: 0;
+        margin-left: 2em;
+    }
+    /*0-----------600xxxxx900xxxxx
+	SERVICES*/
+    .cardContainer {
+        display: flex;
+        justify-content: space-between;
+        max-width: none;
+    }
+    .card {
+        width: 48%;
+    }
+
+    .card + .card {
+        margin-top: 0;
+    }
+
+    .serQuali {
+        max-width: none;
+        margin: 0;
+    }
+
+    .serQuali-row {
+        display: flex;
+        justify-content: space-between;
+    }
+    .serQuali-Div + .serQuali-Div {
+        margin: 0;
+    }
+    .serQuali-Div {
+        width: 30%;
+    }
+
+    /*KNOWLEDGES*/
+    .knowledgeGrid {
+        grid-template-columns: repeat(12, 1fr);
+        grid-row-gap: 40px;
+        grid-column-gap: 20px;
+        max-width: 600px;
+        padding: 0;
+    }
+    .gridItem {
+        background-color: #ececec;
+    }
+    .gridItem-1 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+    .gridItem-2 {
+        grid-column-start: 5;
+        grid-column-end: 9;
+    }
+    .gridItem-3 {
+        grid-column-start: 9;
+        grid-column-end: 13;
+    }
+    .gridItem-4 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+
+    .gridItem-5 {
+        grid-column-start: 5;
+        grid-column-end: 9;
+    }
+    .gridItem-6 {
+        grid-column-start: 9;
+        grid-column-end: 13;
+    }
+    .gridItem-7 {
+        grid-column-start: 3;
+        grid-column-end: 7;
+    }
+    .gridItem-8 {
+        position: relative;
+        grid-column-start: 7;
+        grid-column-end: 11;
+    }
+
+    #git_icon,
+    #git_icon_text {
+        z-index: 1;
+    }
+
+    #background_for_git_icon {
+        position: absolute;
+        display: block;
+        border-radius: 8px;
+        height: 57px;
+        width: 57px;
+        left: 50%;
+        top: 18px;
+        transform: translateX(-50%) rotate(45deg);
+        background-color: #fff;
+    }
+
+    .footerText {
+        margin-top: 3em;
+    }
+}
+
+@media (min-width: 900px) {
+    /*0-----------600-----900xxxxx
+	GLOBAL*/
+    section {
+        padding: 2em 0 0 0;
+    }
+    .container {
+        padding: 1em 2em;
+    }
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .col + .col {
+        margin-left: 2em;
+    }
+    /*0-----------600-----900xxxxx
+	NAV-BAR*/
+    .navList {
+        margin: 1em 2em 1em 0;
+    }
+    .navLogo {
+        margin-left: 1.6em;
+    }
+    .navList_item + .navList_item {
+        margin: 0 0 0 2em;
+    }
+    /*0-----------600-----900xxxxx
+	HEAD-SECTION*/
+    .topElements {
+        max-width: none;
+    }
+    .opacidade {
+        background: rgba(255, 255, 255, 1);
+    }
+    .topContent {
+        width: 60%;
+        align-self: center;
+    }
+    .topSubText {
+        color: #999;
+        width: 80%;
+    }
+    .topButton {
+        margin-left: 3em;
+    }
+    .topImage {
+        display: block;
+        align-self: center;
+        width: 30%;
+        height: 30%;
+        margin-left: 1em;
+        max-width: 320px;
+        padding: 0;
+    }
+    /*0-----------600-----900xxxxx
+	SERVICES*/
+    .serConteudo {
+        max-width: none;
+    }
+    .ser-colPrinc {
+        width: 65%;
+    }
+    .serQuali {
+        width: 35%;
+        min-width: 220px;
+        max-width: 300px;
+    }
+    .serQuali-row {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 90%;
+    }
+    .serQuali-Div {
+        width: 100%;
+    }
+    .serQuali-Div + .serQuali-Div {
+        margin: 2.5em 0 0 0;
+    }
+    /*0-----------600-----900xxxxx
+	KNOWLEDGES*/
+    .knowledgeGrid {
+        grid-auto-rows: 150px;
+        max-width: 800px;
+    }
+    .gridItem {
+        padding: 15px;
+    }
+    #background_for_git_icon {
+        top: 27px;
+    }
+    /*0-----------600-----900xxxxx
+	ABOUT-ME*/
+    .sobConteudo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: none;
+        margin: 0;
+    }
+
+    .sobConteudo img {
+        margin: 0;
+    }
+    .sobConteudo div {
+        margin-left: 1.5em;
+        max-width: 600px;
+    }
 }

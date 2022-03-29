@@ -7,10 +7,6 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" href="style/style.css">
-	<link rel="stylesheet" href="style/media-querys/bf600px.css">
-	<link rel="stylesheet" href="style/media-querys/bf900px.css">
-	<link rel="stylesheet" href="style/media-querys/af600px.css">
-	<link rel="stylesheet" href="style/media-querys/af900px.css">
 </head>
 <body>
 
@@ -18,7 +14,6 @@
 
 	<!--
 		BARRA DE NAVEGAÇÃO FIXA
-		A
 	-->
 	<div id="all"> <!--Analisar se esse tag é necessário-->
 		<header>
@@ -41,7 +36,7 @@
 		-->
 		<div class="container">
 			<section id="main">
-				<div class="row">
+				<div class="topElements row">
 					<div class="topContent col">
 						<div class="top-fundoText">
 							<div class="opacidade">
@@ -68,30 +63,43 @@
 				<div class="row serConteudo"> <!-- Pai Flex -->
 					<div class="col ser-colPrinc">
 						<h2 class="sectTitle">Serviços</h2>
-						<article id="specs">
-							<h3 class="serSub-Titulo">Desenvolvimento e Manutenção de Sites Estáticos</h3>
-							<p class="serTexto">Crio e faço manutenção de páginas Web, especificamente desenvolvendo em client-side, com foco na responsividade, interatividade e no design geral dos mesmos. Em outras palavras, meu trabalho se aplica na inserção de conteúdo, layout e programação de sites na internet. javascript by Ben Davis from the Noun Project</p>
+						<h3 class="serSub-Titulo">Desenvolvimento e Manutenção de Sites e Aplicações Web</h3>
+						<article id="front-end">
+							<h3 class="">Front-end Jr.</h3>
+							<p class="serTexto">Com domínio nas habilidades inerentes ao front-end, tenho a capacidade de entregar um site/ aplicação web, responsivo, com layout atraente, e com interação dinâmica para os seus usuários.</p>
+							<p class="serTexto">No desenvolvimento em front-end, meu foco é direcionado aos seguintes conceitos e recursos:</p>
+							<ul>
+								<li>
+									aprofundamento em CSS, e suas ferramentas:
+									<ul>
+										<li>Flexbox, Grid, Position, media-queries;</li>
+										<li>aplicabilidade do método de desenvolvimento Mobile-First;</li>
+										<li>uso adequado das boxes (Display, Box-sizing, Padding, Margin, Width, Height).</li>
+									</ul>
+								</li>
+								<li>
+									aprofundamento em JavaScript puro:
+									<ul>
+										<li>algoritmos básicos (uso de condicionais, loops de repetição, variáveis, funções);</li>
+										<li>tratamento de arrays (map, foreach, reduce);</li>
+										<li>requisições assíncronas (AJAX, JSON, Fetch API);</li>
+										<li>funções assíncronas (async await, Promises, callbacks).</li>
+									</ul>
+								</li>
+							</ul>
 						</article>
-						<article id="portfolio">
-							<h3 class="serSub-Titulo">Portfólio Profissional</h3>
-							<div class="cardContainer">
-								<div class="card">
-									<div>
-										<img class="portfolioImagem" src="img/site_almoco-caseiro.png">
-										<h5>Arevalo's Almoço Caseiro</h5>
-										<p>Desenvolvido em Setembro de 2021</p>
-									</div>
-									<button id="b_port_iframeRes">Visualizar</button>
-								</div>
-								<div class="card">
-									<div>
-										<img class="portfolioImagem" src="img/portLevindo-big.png">
-										<h5>Escritório de Advocacia<br/>Levindo Oliveira</h5>
-										<p>Desenvolvido em Maio de 2021</p>
-									</div>
-									<button id="b_port_iframeLev">Visualizar</button>
-								</div>
-							</div>
+						<article id="back-end">
+							<h3>Back-end Jr.</h3>
+							<p class="serTexto">Nos últimos meses tenho me aventurado em desenvolvimento no ambiente node.js, que, em geral, permite a criação de programas de linha de comando, e de servidores web.</p>
+							<p class="serTexto">Até o momento, na minha jornada Dev, me familiarizei com os seguintes conceitos e recursos inerentes ao desenvolvimento no back:</p>
+							<ul>
+								<li>criação de servidores web por meio de Node Express;</li>
+								<li>uso e aplicabilidade de dependências (npm);</li>
+								<li>tratamento de requisições HTTP, ou middlewares;</li>
+								<li>definição de templates de páginas HTML por meio de EJS;</li>
+								<li>compressão e redimensionamento de imagens fazendo uso do pacote Sharp;</li>
+								<li>estruturação baseada no modelo Rest API.</li>
+							</ul>
 						</article>
 					</div>
 
@@ -121,27 +129,67 @@
 
 			<hr class="divisoria">
 
+			<!-- PORTFOLIO -->
+
+			<section id="portfolio-area">
+				<h2 class="sectTitle">Portfolio Profissional</h2>
+				<div class="cardContainer">
+					<div class="card">
+						<div>
+							<img class="portfolioImagem" src="img/site_almoco-caseiro.png">
+							<h5>Arevalo's Almoço Caseiro</h5>
+							<p>Desenvolvido em Setembro de 2021</p>
+						</div>
+						<button id="b_port_iframeRes">Visualizar</button>
+					</div>
+					<div class="card">
+						<div>
+							<img class="portfolioImagem" src="img/portLevindo-big.png">
+							<h5>Escritório de Advocacia<br/>Levindo Oliveira</h5>
+							<p>Desenvolvido em Maio de 2021</p>
+						</div>
+						<button id="b_port_iframeLev">Visualizar</button>
+					</div>
+				</div>
+			</section>
+
+			<hr class="divisoria">
+
+			<!-- CONHECIMENTOS -->
+
 			<section id="knowledges">
 				<h2 class="sectTitle">Conhecimentos na Área</h2>
 				<div class="knowledgeGrid">
 					<div class="gridItem gridItem-1">
-						<img class="gridIcons" src="img/icons8-html-5-96.png">
+						<img class="gridIcons" src="img/temp/icon_html.png">
 						<span class="knowledgeText">HTML5</span>
 					</div>
 					<div class="gridItem gridItem-2">
-						<img class="gridIcons" src="img/icons8-css3-96.png">
+						<img class="gridIcons" src="img/temp/icon_css.png">
 						<span class="knowledgeText">CSS3</span>
 					</div>
 					<div class="gridItem gridItem-3">
-						<img class="gridIcons" src="img/icons8-javascript-96.png">
+						<img class="gridIcons" src="img/temp/icon_javascript.png">
 						<span class="knowledgeText">JavaScript</span>
 					</div>
 					<div class="gridItem gridItem-4">
-						<img class="gridIcons" src="img/icons8-jquery-100.png" height="90">
-						<span class="knowledgeText">JQuery</span>
+						<img class="gridIcons" src="img/temp/icon_bootstrap.png" height="90">
+						<span class="knowledgeText">Bootstrap</span>
 					</div>
 					<div class="gridItem gridItem-5">
-						<img id="git_icon" class="gridIcons" src="img/icons8-git-96.png">
+						<img class="gridIcons" src="img/temp/icon_jquery.png" height="90">
+						<span class="knowledgeText">JQuery</span>
+					</div>
+					<div class="gridItem gridItem-6">
+						<img class="gridIcons" src="img/temp/icon_nodejs.png" height="90">
+						<span class="knowledgeText">Node JS</span>
+					</div>
+					<div class="gridItem gridItem-7">
+						<img class="gridIcons" src="img/temp/icon_firebase.png">
+						<span class="knowledgeText">Firebase</span>
+					</div>
+					<div class="gridItem gridItem-8">
+						<img id="git_icon" class="gridIcons" src="img/temp/icon_git.png">
 						<span id="git_icon_text" class="knowledgeText">Git</span>
 						<div id="background_for_git_icon"></div>
 					</div>
