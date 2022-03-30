@@ -90,6 +90,27 @@ button.closeIframe:focus {
     outline: none;
     text-decoration: underline;
 }
+
+@media (min-width: 900px) {
+    /*0-----------600-----900xxxxx
+	GLOBAL*/
+    section {
+        padding: 2em 0 0 0;
+    }
+    .container {
+        padding: 1em 2em;
+    }
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .col + .col {
+        margin-left: 2em;
+    }
+}
+
 /*NAV-BAR*/
 header {
     font-family: Calibri, sans-serif;
@@ -168,9 +189,44 @@ header {
     transform: translateY(3px);
 }
 
-/* 
+@media (min-width: 600px) {
+    /*NAV-BAR*/
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navLogo {
+        position: static;
+        margin-left: 0.6em;
+    }
+    .navButtonShow-mobile {
+        display: none;
+    }
+    .navList {
+        visibility: visible;
+        margin: 1em 1em 1em 0;
+        height: auto;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .navList_item + .navList_item {
+        margin: 0 0 0 1em;
+    }
+}
 
-	*/
+@media (min-width: 900px) {
+    /*NAV-BAR*/
+    .navList {
+        margin: 1em 2em 1em 0;
+    }
+    .navLogo {
+        margin-left: 1.6em;
+    }
+    .navList_item + .navList_item {
+        margin: 0 0 0 2em;
+    }
+}
 
 /*HEAD-SECTION*/
 section#main {
@@ -223,6 +279,58 @@ section#main {
 .topImage {
     display: none;
     margin: 0;
+}
+
+@media (min-width: 600px) {
+    /*0-----------600xxxxx900xxxxx
+	HEAD-SECTION*/
+    .topElements {
+        margin: 0 auto;
+        max-width: 600px;
+    }
+    .topText {
+        font-size: 2.6rem;
+        text-align: left;
+    }
+    .topSubText {
+        margin-top: 0.2em;
+        width: 60%;
+    }
+    .topButton {
+        margin-right: 0;
+        margin-left: 2em;
+    }
+}
+
+@media (min-width: 900px) {
+    /*0-----------600-----900xxxxx
+	HEAD-SECTION*/
+    .topElements {
+        max-width: none;
+    }
+    .opacidade {
+        background: rgba(255, 255, 255, 1);
+    }
+    .topContent {
+        width: 60%;
+        align-self: center;
+    }
+    .topSubText {
+        color: #999;
+        width: 80%;
+    }
+    .topButton {
+        margin-left: 3em;
+    }
+    .topImage {
+        display: block;
+        align-self: center;
+        width: 30%;
+        height: 30%;
+        margin-left: 1em;
+        max-width: 320px;
+        padding: 0;
+    }
 }
 
 /*SERVICES*/
@@ -328,6 +436,66 @@ section#main {
     margin: 0 auto;
 }
 
+@media (min-width: 600px) {
+    /*0-----------600xxxxx900xxxxx
+	SERVICES*/
+    .cardContainer {
+        display: flex;
+        justify-content: space-between;
+        max-width: none;
+    }
+    .card {
+        width: 48%;
+    }
+
+    .card + .card {
+        margin-top: 0;
+    }
+
+    .serQuali {
+        max-width: none;
+        margin: 0;
+    }
+
+    .serQuali-row {
+        display: flex;
+        justify-content: space-between;
+    }
+    .serQuali-Div + .serQuali-Div {
+        margin: 0;
+    }
+    .serQuali-Div {
+        width: 30%;
+    }
+}
+
+@media (min-width: 900px) {
+    /*0-----------600-----900xxxxx
+	SERVICES*/
+    .serConteudo {
+        max-width: none;
+    }
+    .ser-colPrinc {
+        width: 65%;
+    }
+    .serQuali {
+        width: 35%;
+        min-width: 220px;
+        max-width: 300px;
+    }
+    .serQuali-row {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 90%;
+    }
+    .serQuali-Div {
+        width: 100%;
+    }
+    .serQuali-Div + .serQuali-Div {
+        margin: 2.5em 0 0 0;
+    }
+}
+
 /* PORTFOLIO*/
 
 /*KNOWLEDGES*/
@@ -399,146 +567,7 @@ section#main {
     color: #072a2d;
 }
 
-/*ABOUT-ME*/
-
-.sobConteudo {
-    margin: 0 auto;
-    max-width: 600px;
-}
-
-.sobConteudo img {
-    display: block;
-    margin: 0 auto 1em auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgb(82, 75, 75);
-}
-.sobText {
-    text-align: justify;
-    margin-top: 1em;
-}
-
-/*FOOTER/CONTACTS*/
-
-footer {
-    width: 100%;
-    background: linear-gradient(to top, #336666, #66cccc 200%);
-}
-
-.sectTitle_contacts {
-    font-family: Eurostile Bold, sans-serif;
-    text-align: center;
-    font-size: 2.5rem;
-    color: #ffff;
-}
-
-.contConteudo {
-    margin: 0 auto;
-    max-width: 500px;
-}
-
-.contLista {
-    padding: 0;
-}
-
-.contLista_item {
-    display: flex;
-    align-items: center;
-}
-
-.contLista_item + .contLista_item {
-    margin-top: 0.5em;
-}
-
-span.contatos {
-    font-size: 1.2rem;
-    margin-left: 0.5em;
-    font-weight: bold;
-    color: #fff;
-}
-
-.footerText {
-    text-align: center;
-    font-size: 1rem;
-    color: #ddd;
-}
-
 @media (min-width: 600px) {
-    /*0-----------600xxxxx900xxxxx
-	GLOBAL*/
-
-    /*0-----------600xxxxx900xxxxx
-	NAV-BAR*/
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .navLogo {
-        position: static;
-        margin-left: 0.6em;
-    }
-    .navButtonShow-mobile {
-        display: none;
-    }
-    .navList {
-        visibility: visible;
-        margin: 1em 1em 1em 0;
-        height: auto;
-        display: flex;
-        justify-content: flex-end;
-    }
-    .navList_item + .navList_item {
-        margin: 0 0 0 1em;
-    }
-    /*0-----------600xxxxx900xxxxx
-	HEAD-SECTION*/
-    .topElements {
-        margin: 0 auto;
-        max-width: 600px;
-    }
-    .topText {
-        font-size: 2.6rem;
-        text-align: left;
-    }
-    .topSubText {
-        margin-top: 0.2em;
-        width: 60%;
-    }
-    .topButton {
-        margin-right: 0;
-        margin-left: 2em;
-    }
-    /*0-----------600xxxxx900xxxxx
-	SERVICES*/
-    .cardContainer {
-        display: flex;
-        justify-content: space-between;
-        max-width: none;
-    }
-    .card {
-        width: 48%;
-    }
-
-    .card + .card {
-        margin-top: 0;
-    }
-
-    .serQuali {
-        max-width: none;
-        margin: 0;
-    }
-
-    .serQuali-row {
-        display: flex;
-        justify-content: space-between;
-    }
-    .serQuali-Div + .serQuali-Div {
-        margin: 0;
-    }
-    .serQuali-Div {
-        width: 30%;
-    }
-
     /*KNOWLEDGES*/
     .knowledgeGrid {
         grid-template-columns: repeat(12, 1fr);
@@ -601,93 +630,9 @@ span.contatos {
         transform: translateX(-50%) rotate(45deg);
         background-color: #fff;
     }
-
-    .footerText {
-        margin-top: 3em;
-    }
 }
 
 @media (min-width: 900px) {
-    /*0-----------600-----900xxxxx
-	GLOBAL*/
-    section {
-        padding: 2em 0 0 0;
-    }
-    .container {
-        padding: 1em 2em;
-    }
-    .row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .col + .col {
-        margin-left: 2em;
-    }
-    /*0-----------600-----900xxxxx
-	NAV-BAR*/
-    .navList {
-        margin: 1em 2em 1em 0;
-    }
-    .navLogo {
-        margin-left: 1.6em;
-    }
-    .navList_item + .navList_item {
-        margin: 0 0 0 2em;
-    }
-    /*0-----------600-----900xxxxx
-	HEAD-SECTION*/
-    .topElements {
-        max-width: none;
-    }
-    .opacidade {
-        background: rgba(255, 255, 255, 1);
-    }
-    .topContent {
-        width: 60%;
-        align-self: center;
-    }
-    .topSubText {
-        color: #999;
-        width: 80%;
-    }
-    .topButton {
-        margin-left: 3em;
-    }
-    .topImage {
-        display: block;
-        align-self: center;
-        width: 30%;
-        height: 30%;
-        margin-left: 1em;
-        max-width: 320px;
-        padding: 0;
-    }
-    /*0-----------600-----900xxxxx
-	SERVICES*/
-    .serConteudo {
-        max-width: none;
-    }
-    .ser-colPrinc {
-        width: 65%;
-    }
-    .serQuali {
-        width: 35%;
-        min-width: 220px;
-        max-width: 300px;
-    }
-    .serQuali-row {
-        flex-direction: column;
-        justify-content: space-around;
-        height: 90%;
-    }
-    .serQuali-Div {
-        width: 100%;
-    }
-    .serQuali-Div + .serQuali-Div {
-        margin: 2.5em 0 0 0;
-    }
     /*0-----------600-----900xxxxx
 	KNOWLEDGES*/
     .knowledgeGrid {
@@ -700,6 +645,27 @@ span.contatos {
     #background_for_git_icon {
         top: 27px;
     }
+}
+
+/*ABOUT-ME*/
+
+.sobConteudo {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.sobConteudo img {
+    display: block;
+    margin: 0 auto 1em auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(82, 75, 75);
+}
+.sobText {
+    text-align: justify;
+    margin-top: 1em;
+}
+
+@media (min-width: 900px) {
     /*0-----------600-----900xxxxx
 	ABOUT-ME*/
     .sobConteudo {
@@ -716,5 +682,56 @@ span.contatos {
     .sobConteudo div {
         margin-left: 1.5em;
         max-width: 600px;
+    }
+}
+
+/*FOOTER/CONTACTS*/
+
+footer {
+    width: 100%;
+    background: linear-gradient(to top, #336666, #66cccc 200%);
+}
+
+.sectTitle_contacts {
+    font-family: Eurostile Bold, sans-serif;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ffff;
+}
+
+.contConteudo {
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.contLista {
+    padding: 0;
+}
+
+.contLista_item {
+    display: flex;
+    align-items: center;
+}
+
+.contLista_item + .contLista_item {
+    margin-top: 0.5em;
+}
+
+span.contatos {
+    font-size: 1.2rem;
+    margin-left: 0.5em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.footerText {
+    text-align: center;
+    font-size: 1rem;
+    color: #ddd;
+}
+
+@media (min-width: 600px) {
+    .footerText {
+        margin-top: 3em;
     }
 }
