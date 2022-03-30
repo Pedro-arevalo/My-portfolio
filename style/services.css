@@ -1,0 +1,187 @@
+/*SERVICES*/
+
+.serConteudo {
+    margin: 0 auto;
+    max-width: 600px;
+    font-size: 1.3rem;
+}
+.serSub-Titulo {
+    margin-top: 0.5em;
+    font-family: Eurostile Bold, serif;
+    color: darkorange;
+    text-align: center;
+}
+.serTexto {
+    text-indent: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+#specs {
+    margin-top: 2em;
+}
+#portfolio {
+    margin-top: 3em;
+}
+
+#services .sub_title {
+    font-family: Eurostile Bold, serif;
+    margin-top: 1em;
+    color: #136c72;
+}
+
+#services .skills_list {
+    list-style: square;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.skills_list_item + .skills_list_item {
+    margin-top: 0.5em;
+}
+
+.cardContainer {
+    margin-bottom: 2em;
+    margin-top: 1.5em;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(2, 51, 65, 0.575);
+    padding: 0.5em 0.5em 1em 0.5em;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    min-height: 340px;
+}
+
+.card + .card {
+    margin-top: 1em;
+}
+
+.card h5 {
+    margin: 1em 0 0 0;
+}
+.card p {
+    color: rgba(255, 255, 255, 0.76);
+    margin: 0.5em 0 1em 0;
+    font-size: 1rem;
+}
+.card button {
+    background-color: orange;
+    border: none;
+    padding: 0.5em 1.2em;
+    font-weight: bold;
+    font-family: 'Eurostile Bold';
+    font-size: 1.2rem;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+}
+.card button:hover,
+.card button:focus {
+    outline: none;
+    opacity: 0.8;
+}
+.serQuali {
+    padding: 1em;
+    background: #136c72;
+    color: #fff;
+    border-radius: 5px;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.serQuali-Div + .serQuali-Div {
+    margin: 2.5em 0 0 0;
+}
+
+.serQuali-head {
+    font-family: Eurostile Bold, sans-serif;
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+.serQuali-Title {
+    margin-top: 0.5em;
+    text-align: center;
+}
+.serQuali-Text {
+    margin: 0.5em 0;
+}
+
+.serQuali-Icon {
+    display: block;
+    margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+    /*0-----------600xxxxx900xxxxx
+	SERVICES*/
+
+    .serSub-Titulo {
+        margin-top: 1.2em;
+    }
+
+    #services .sub_title {
+        margin-top: 1.2em;
+    }
+
+    .cardContainer {
+        display: flex;
+        justify-content: space-between;
+        max-width: none;
+    }
+    .card {
+        width: 48%;
+    }
+
+    .card + .card {
+        margin-top: 0;
+    }
+
+    .serQuali {
+        max-width: none;
+        margin: 0;
+    }
+
+    .serQuali-row {
+        display: flex;
+        justify-content: space-between;
+    }
+    .serQuali-Div + .serQuali-Div {
+        margin: 0;
+    }
+    .serQuali-Div {
+        width: 30%;
+    }
+}
+
+@media (min-width: 900px) {
+    /*0-----------600-----900xxxxx
+	SERVICES*/
+    .serConteudo {
+        max-width: none;
+    }
+    .ser-colPrinc {
+        width: 65%;
+    }
+    .serQuali {
+        width: 35%;
+        min-width: 220px;
+        max-width: 300px;
+    }
+    .serQuali-row {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 90%;
+    }
+    .serQuali-Div {
+        width: 100%;
+    }
+    .serQuali-Div + .serQuali-Div {
+        margin: 2.5em 0 0 0;
+    }
+}

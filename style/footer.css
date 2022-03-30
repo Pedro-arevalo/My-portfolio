@@ -1,0 +1,50 @@
+/*FOOTER/CONTACTS*/
+
+footer {
+    width: 100%;
+    background: linear-gradient(to top, #336666, #66cccc 200%);
+}
+
+.sectTitle_contacts {
+    font-family: Eurostile Bold, sans-serif;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ffff;
+}
+
+.contConteudo {
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.contLista {
+    padding: 0;
+}
+
+.contLista_item {
+    display: flex;
+    align-items: center;
+}
+
+.contLista_item + .contLista_item {
+    margin-top: 0.5em;
+}
+
+span.contatos {
+    font-size: 1.2rem;
+    margin-left: 0.5em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.footerText {
+    text-align: center;
+    font-size: 1rem;
+    color: #ddd;
+}
+
+@media (min-width: 600px) {
+    .footerText {
+        margin-top: 3em;
+    }
+}

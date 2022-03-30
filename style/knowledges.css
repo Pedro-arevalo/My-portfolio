@@ -1,0 +1,148 @@
+/*KNOWLEDGES*/
+.knowledgeGrid {
+    display: grid;
+    grid-auto-rows: 130px;
+    margin: 2em auto 0 auto;
+    border-radius: 5px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    max-width: 420px;
+    padding: 10px;
+}
+
+.gridItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 5px;
+    padding: 10px;
+}
+.gridItem:hover {
+    box-shadow: 3px 3px 10px #555;
+    transition: 0.5s;
+}
+
+.gridItem-1 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+.gridItem-2 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+}
+.gridItem-3 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+.gridItem-4 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+}
+.gridItem-5 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+.gridItem-6 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+}
+.gridItem-7 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+.gridItem-8 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+}
+
+.gridIcons {
+    display: block;
+    height: 80px;
+    margin: 0 auto;
+}
+.knowledgeText {
+    margin-top: 0.5em;
+    text-align: center;
+    color: #072a2d;
+}
+
+@media (min-width: 600px) {
+    /*KNOWLEDGES*/
+    .knowledgeGrid {
+        grid-template-columns: repeat(12, 1fr);
+        grid-row-gap: 40px;
+        grid-column-gap: 20px;
+        max-width: 600px;
+        padding: 0;
+    }
+    .gridItem {
+        background-color: #ececec;
+    }
+    .gridItem-1 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+    .gridItem-2 {
+        grid-column-start: 5;
+        grid-column-end: 9;
+    }
+    .gridItem-3 {
+        grid-column-start: 9;
+        grid-column-end: 13;
+    }
+    .gridItem-4 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+
+    .gridItem-5 {
+        grid-column-start: 5;
+        grid-column-end: 9;
+    }
+    .gridItem-6 {
+        grid-column-start: 9;
+        grid-column-end: 13;
+    }
+    .gridItem-7 {
+        grid-column-start: 3;
+        grid-column-end: 7;
+    }
+    .gridItem-8 {
+        position: relative;
+        grid-column-start: 7;
+        grid-column-end: 11;
+    }
+
+    #git_icon,
+    #git_icon_text {
+        z-index: 1;
+    }
+
+    #background_for_git_icon {
+        position: absolute;
+        display: block;
+        border-radius: 8px;
+        height: 57px;
+        width: 57px;
+        left: 50%;
+        top: 18px;
+        transform: translateX(-50%) rotate(45deg);
+        background-color: #fff;
+    }
+}
+
+@media (min-width: 900px) {
+    /*0-----------600-----900xxxxx
+	KNOWLEDGES*/
+    .knowledgeGrid {
+        grid-auto-rows: 150px;
+        max-width: 800px;
+    }
+    .gridItem {
+        padding: 15px;
+    }
+    #background_for_git_icon {
+        top: 27px;
+    }
+}

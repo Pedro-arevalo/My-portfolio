@@ -1,0 +1,116 @@
+/*NAV-BAR*/
+header {
+    font-family: Calibri, sans-serif;
+    width: 100%;
+    position: fixed;
+    background: linear-gradient(to top, #336666, #66cccc 200%);
+    z-index: 3;
+}
+.navBar {
+    padding: 0.2em 0;
+    min-height: 90px;
+}
+
+.navLogo {
+    position: absolute;
+    top: 0.55em;
+    left: 0.6em;
+}
+.navList {
+    list-style: none;
+    margin: 1em 0 0 40%;
+    padding: 0;
+}
+.navList_item + .navList_item {
+    margin: 0.3em 0 0 0;
+}
+.navList_itemLink {
+    text-decoration: none;
+    color: #fff;
+}
+.navList_itemLink:hover,
+.navList_itemLink:focus {
+    outline: none;
+    text-decoration: underline;
+}
+
+.navButtonShow-mobile {
+    cursor: pointer;
+    border: 0;
+    width: 3em;
+    height: 3em;
+    padding: 0em;
+    border-radius: 50%;
+    background: #072a2d;
+    color: white;
+    transition: opacity 250ms ease;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+}
+.navButtonShow-mobile:focus,
+.navButtonShow-mobile:hover {
+    opacity: 0.75;
+}
+.hamburger {
+    width: 50%;
+    position: relative;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    background: white;
+}
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    width: 100%;
+}
+.hamburger::before {
+    transform: translateY(-6px);
+}
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+@media (min-width: 600px) {
+    /*NAV-BAR*/
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navLogo {
+        position: static;
+        margin-left: 0.6em;
+    }
+    .navButtonShow-mobile {
+        display: none;
+    }
+    .navList {
+        visibility: visible;
+        margin: 1em 1em 1em 0;
+        height: auto;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .navList_item + .navList_item {
+        margin: 0 0 0 1em;
+    }
+}
+
+@media (min-width: 900px) {
+    /*NAV-BAR*/
+    .navList {
+        margin: 1em 2em 1em 0;
+    }
+    .navLogo {
+        margin-left: 1.6em;
+    }
+    .navList_item + .navList_item {
+        margin: 0 0 0 2em;
+    }
+}
