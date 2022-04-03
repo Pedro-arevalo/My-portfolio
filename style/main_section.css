@@ -1,34 +1,47 @@
-/*HEAD-SECTION*/
+/*
+====================================================================
+                            MAIN SECTION
+====================================================================
+*/
+
+/* -------------------------- ALL SCREENS -------------------------- */
+
 section#main {
     padding: 5em 0 0 0;
 }
-.top-fundoText {
+
+#main .background_image {
     background-image: url('../img/layout-medium.png');
     background-repeat: no-repeat;
     background-position: center center;
 }
-.opacidade {
-    background: rgba(255, 255, 255, 0.8);
+
+#main .background_opacity {
+    background-color: rgba(255, 255, 255, 0.8);
 }
-.TopOla {
+
+#main .minor_title {
     font-size: 1.5rem;
     /* color: #072a2d; */
     color: #292b2c;
 }
-.topText {
+
+#main .title {
     font-family: Eurostile Bold, Courier;
     font-size: 2.4rem;
     color: #072a2d;
     /* color: #292b2c; */
     text-transform: uppercase;
 }
-.topSubText {
+
+#main .subtitle {
     width: 80%;
     font-size: 1.6rem;
     padding: 0.5em 0 2em 0;
     color: #42494a;
 }
-.topButton {
+
+#main .modal_button {
     display: block;
     margin: 0 auto;
     background: #ffa500;
@@ -41,64 +54,81 @@ section#main {
     cursor: pointer;
     font-family: Eurostile Bold, sans-serif;
 }
-.topButton:hover,
-.topButton:focus {
+
+#main .modal_button:hover,
+#main .modal_button:focus {
     outline: none;
     opacity: 0.8;
 }
-.topImage {
+
+#main .figure_col {
     display: none;
     margin: 0;
 }
 
+/* -------------------- ABOVE 600 PIXESLS WIDE -------------------- */
+
 @media (min-width: 600px) {
-    /*0-----------600xxxxx900xxxxx
-	HEAD-SECTION*/
-    .topElements {
+
+    .main_section_container {
         margin: 0 auto;
         max-width: 600px;
     }
-    .topText {
+
+    #main .title {
         font-size: 2.6rem;
         text-align: left;
     }
-    .topSubText {
+
+    #main .subtitle {
         margin-top: 0.2em;
         width: 60%;
     }
-    .topButton {
+
+    #main .modal_button {
         margin-right: 0;
         margin-left: 2em;
     }
+
 }
 
+/* -------------------- ABOVE 900 PIXESLS WIDE -------------------- */
+
 @media (min-width: 900px) {
-    /*0-----------600-----900xxxxx
-	HEAD-SECTION*/
-    .topElements {
+
+    .main_section_container {
+        margin: 0;
         max-width: none;
     }
-    .opacidade {
-        background: rgba(255, 255, 255, 1);
+
+    #main .background_image {
+        background-image: none;
     }
-    .topContent {
+
+    #main .background_opacity {
+        background-color: transparent;
+    }
+
+    #main .main_col {
         width: 60%;
         align-self: center;
     }
-    .topSubText {
+
+    #main .subtitle {
         color: #999;
         width: 80%;
     }
-    .topButton {
+
+    #main .modal_button {
         margin-left: 3em;
     }
-    .topImage {
-        display: block;
+
+    #main .figure_col {
+        display: flex;
+        align-items: center;
         align-self: center;
         width: 30%;
-        height: 30%;
-        margin-left: 1em;
         max-width: 320px;
-        padding: 0;
     }
+
 }

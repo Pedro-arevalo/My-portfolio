@@ -1,28 +1,35 @@
-/* =========================== SERVICES ===========================*/
+/*
+========================================================================
+                            SERVICES SECTION
+========================================================================
+*/
 
-/* ------------------------- GLOBAL STYLE ------------------------- */
+/* -------------------------- ALL SCREENS -------------------------- */
 
 .service_container {
     margin: 0 auto;
     max-width: 600px;
     font-size: 1.3rem;
 }
+
 #services .topic_title {
     margin-top: 0.5em;
     font-family: Eurostile Bold, serif;
     color: darkorange;
     text-align: center;
 }
+
+#services .subtitle {
+    font-family: Eurostile Bold, serif;
+    text-indent: 1.2em;
+    margin-top: 1em;
+    color: #136c72;
+}
+
 #services .text {
     text-indent: 1.5em;
     margin-top: 1em;
     margin-bottom: 0.5em;
-}
-
-#services .subtitle {
-    font-family: Eurostile Bold, serif;
-    margin-top: 1em;
-    color: #136c72;
 }
 
 #services .skills_list {
@@ -70,7 +77,7 @@
 /* -------------------- ABOVE 600 PIXESLS WIDE -------------------- */
 
 @media (min-width: 600px) {
-    /*SERVICES*/
+
     #services .topic_title {
         margin-top: 1.2em;
     }
@@ -96,12 +103,13 @@
     .qualities_topic + .qualities_topic {
         margin: 0;
     }
+
 }
 
 /* -------------------- ABOVE 900 PIXESLS WIDE -------------------- */
 
 @media (min-width: 900px) {
-    /*SERVICES*/
+
     .service_container {
         max-width: none;
     }
@@ -126,4 +134,5 @@
     .qualities_topic + .qualities_topic {
         margin: 2.5em 0 0 0;
     }
+
 }
