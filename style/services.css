@@ -1,29 +1,25 @@
-/*SERVICES*/
+/* =========================== SERVICES ===========================*/
 
-.serConteudo {
+/* ------------------------- GLOBAL STYLE ------------------------- */
+
+.service_container {
     margin: 0 auto;
     max-width: 600px;
     font-size: 1.3rem;
 }
-.serSub-Titulo {
+#services .topic_title {
     margin-top: 0.5em;
     font-family: Eurostile Bold, serif;
     color: darkorange;
     text-align: center;
 }
-.serTexto {
+#services .text {
     text-indent: 1.5em;
     margin-top: 1em;
     margin-bottom: 0.5em;
 }
-#specs {
-    margin-top: 2em;
-}
-#portfolio {
-    margin-top: 3em;
-}
 
-#services .sub_title {
+#services .subtitle {
     font-family: Eurostile Bold, serif;
     margin-top: 1em;
     color: #136c72;
@@ -39,149 +35,95 @@
     margin-top: 0.5em;
 }
 
-.cardContainer {
-    margin-bottom: 2em;
-    margin-top: 1.5em;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: rgba(2, 51, 65, 0.575);
-    padding: 0.5em 0.5em 1em 0.5em;
-    border-radius: 5px;
-    color: #fff;
-    text-align: center;
-    min-height: 340px;
-}
-
-.card + .card {
-    margin-top: 1em;
-}
-
-.card h5 {
-    margin: 1em 0 0 0;
-}
-.card p {
-    color: rgba(255, 255, 255, 0.76);
-    margin: 0.5em 0 1em 0;
-    font-size: 1rem;
-}
-.card button {
-    background-color: orange;
-    border: none;
-    padding: 0.5em 1.2em;
-    font-weight: bold;
-    font-family: 'Eurostile Bold';
-    font-size: 1.2rem;
-    margin: 0 auto;
-    display: block;
-    cursor: pointer;
-}
-.card button:hover,
-.card button:focus {
-    outline: none;
-    opacity: 0.8;
-}
-.serQuali {
+.qualities_col {
     padding: 1em;
     background: #136c72;
     color: #fff;
     border-radius: 5px;
     max-width: 350px;
-    margin: 0 auto;
+    margin: 2em auto 0 auto;
 }
 
-.serQuali-Div + .serQuali-Div {
-    margin: 2.5em 0 0 0;
-}
-
-.serQuali-head {
+.qualities_col .title {
     font-family: Eurostile Bold, sans-serif;
     text-align: center;
     margin-bottom: 1.5em;
 }
-.serQuali-Title {
-    margin-top: 0.5em;
-    text-align: center;
-}
-.serQuali-Text {
-    margin: 0.5em 0;
+
+.qualities_topic + .qualities_topic {
+    margin: 2.5em 0 0 0;
 }
 
-.serQuali-Icon {
+.qualities_topic_icon {
     display: block;
     margin: 0 auto;
 }
 
+.qualities_topic_title {
+    margin-top: 0.5em;
+    text-align: center;
+}
+.qualities_topic_text {
+    margin: 0.5em 0;
+}
+
+/* -------------------- ABOVE 600 PIXESLS WIDE -------------------- */
+
 @media (min-width: 600px) {
-    /*0-----------600xxxxx900xxxxx
-	SERVICES*/
-
-    .serSub-Titulo {
+    /*SERVICES*/
+    #services .topic_title {
         margin-top: 1.2em;
     }
 
-    #services .sub_title {
+    #services .subtitle {
         margin-top: 1.2em;
     }
 
-    .cardContainer {
-        display: flex;
-        justify-content: space-between;
+    .qualities_col {
         max-width: none;
-    }
-    .card {
-        width: 48%;
+        margin: 2em 0 0 0;
     }
 
-    .card + .card {
-        margin-top: 0;
-    }
-
-    .serQuali {
-        max-width: none;
-        margin: 0;
-    }
-
-    .serQuali-row {
+    .qualities_flex_container {
         display: flex;
         justify-content: space-between;
     }
-    .serQuali-Div + .serQuali-Div {
-        margin: 0;
-    }
-    .serQuali-Div {
+
+    .qualities_topic {
         width: 30%;
+    }
+
+    .qualities_topic + .qualities_topic {
+        margin: 0;
     }
 }
 
+/* -------------------- ABOVE 900 PIXESLS WIDE -------------------- */
+
 @media (min-width: 900px) {
-    /*0-----------600-----900xxxxx
-	SERVICES*/
-    .serConteudo {
+    /*SERVICES*/
+    .service_container {
         max-width: none;
     }
-    .ser-colPrinc {
+
+    #services .main_col {
         width: 65%;
     }
-    .serQuali {
+    .qualities_col {
+        margin-top: 0;
         width: 35%;
         min-width: 220px;
         max-width: 300px;
     }
-    .serQuali-row {
+    .qualities_flex_container {
         flex-direction: column;
         justify-content: space-around;
         height: 90%;
     }
-    .serQuali-Div {
+    .qualities_topic {
         width: 100%;
     }
-    .serQuali-Div + .serQuali-Div {
+    .qualities_topic + .qualities_topic {
         margin: 2.5em 0 0 0;
     }
 }
