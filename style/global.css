@@ -45,6 +45,12 @@ h4 {
     color: #072a2d;
     /* color: #292b2c; */
 }
+
+.pure_text {
+    text-indent: 1.5em;
+    margin-top: 1em;
+}
+
 img {
     max-width: 100%;
 }

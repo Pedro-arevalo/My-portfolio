@@ -1,22 +1,17 @@
 /*FOOTER/CONTACTS*/
 
-footer {
-    width: 100%;
+footer#contacts {
     background: linear-gradient(to top, #336666, #66cccc 200%);
+    padding-top: 2em;
 }
 
-.sectTitle_contacts {
-    font-family: Eurostile Bold, sans-serif;
-    text-align: center;
-    font-size: 2.5rem;
-    color: #ffff;
-}
-
-.contConteudo {
+.contacts_container {
     margin: 0 auto;
     max-width: 500px;
 }
-
+#contacts .title {
+    color: #ffff;
+}
 .contLista {
     padding: 0;
 }

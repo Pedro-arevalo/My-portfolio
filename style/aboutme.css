@@ -1,0 +1,43 @@
+/*
+========================================================================
+                            'ABOUT ME' SECTION
+========================================================================
+*/
+
+/* -------------------------- ALL SCREENS -------------------------- */
+
+.aboutme_container {
+    margin: 0 auto;
+    font-size: 1.3rem;
+    max-width: 600px;
+}
+
+.aboutme_container .pic_col {
+    display: block;
+    margin: 0 auto 1em auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(82, 75, 75);
+}
+
+/* -------------------- ABOVE 900 PIXESLS WIDE -------------------- */
+
+@media (min-width: 900px) {
+
+    .aboutme_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: none;
+        margin: 0;
+    }
+
+    .aboutme_container .pic_col {
+        margin: 0;
+    }
+
+    .aboutme_container .main_col {
+        margin-left: 1.5em;
+        max-width: 600px;
+    }
+    
+}

@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="style/services.css">
 	<link rel="stylesheet" href="style/portfolio.css">
 	<link rel="stylesheet" href="style/knowledges.css">
-	<link rel="stylesheet" href="style/about_me.css">
+	<link rel="stylesheet" href="style/aboutme.css">
 	<link rel="stylesheet" href="style/footer.css">
 </head>
 <body>
@@ -67,13 +67,13 @@
 			-->
 			<section id="services">
 				
-				<div class="row service_container"> <!-- Pai Flex -->
+				<div class="row services_container"> <!-- Pai Flex -->
 					<div class="col main_col">
 						<h2 class="sectTitle">Serviços</h2>
 						<h3 class="topic_title">Desenvolvimento e Manutenção de Sites e Aplicações Web</h3>
 						<article id="front-end">
 							<h3 class="subtitle">Front-end</h3>
-							<p class="text"> Além de ter uma base sólida de programação em JavaScript, também me especializei em aplicabilidades fundamentais do CSS: 
+							<p class="pure_text"> Além de ter uma base sólida de programação em JavaScript, também me especializei em aplicabilidades fundamentais do CSS: 
 							</p>
 
 
@@ -83,13 +83,13 @@
 								<li class="skills_list_item">Método de desenvolvimento Mobile-First;</li>
 							</ul>
 						
-							<p class="text">Estes conceitos permitem que o lado visual dos meus projetos seja preciso, atraente, e adaptável para todas as telas e tamanhos.</p>
+							<p class="pure_text">Estes conceitos permitem que o lado visual dos meus projetos seja preciso, atraente, e adaptável para todas as telas e tamanhos.</p>
 
 						</article>
 						<article id="back-end">
 							<h3 class="subtitle">Back-end</h3>
-							<p class="text">Nos últimos meses tenho me aventurado em desenvolvimento no ambiente node.js, que, em geral, permite a criação de programas de linha de comando, e de servidores web.</p>
-							<p class="text">Até o momento, na minha jornada Dev, me familiarizei com os seguintes conceitos e recursos inerentes ao desenvolvimento no back:</p>
+							<p class="pure_text">Nos últimos meses tenho me aventurado em desenvolvimento no ambiente node.js, que, em geral, permite a criação de programas de linha de comando, e de servidores web.</p>
+							<p class="pure_text">Até o momento, na minha jornada Dev, me familiarizei com os seguintes conceitos e recursos inerentes ao desenvolvimento no back:</p>
 							<ul class="skills_list">
 								<li class="skills_list_item">Criação de servidores web por meio de Node Express;</li>
 								<li class="skills_list_item">Uso e aplicabilidade de dependências (npm);</li>
@@ -100,8 +100,6 @@
 							</ul>
 						</article>
 					</div>
-
-					<!--   -->
 
 					<!-- Qualidades dos sites que crio -->
 					<aside class="col qualities_col">
@@ -129,7 +127,9 @@
 
 			<hr class="divisoria">
 
-			<!-- PORTFOLIO -->
+			<!--
+				PORTFOLIO SECTION
+			-->
 
 			<section id="portfolio-area">
 				<h2 class="sectTitle">Portfolio Profissional</h2>
@@ -155,7 +155,9 @@
 
 			<hr class="divisoria">
 
-			<!-- CONHECIMENTOS -->
+			<!--
+				KNOWLEDGES SECTION
+			-->
 
 			<section id="knowledges">
 				<h2 class="sectTitle">Conhecimentos na Área</h2>
@@ -199,18 +201,17 @@
 			<hr class="divisoria">
 
 			<!--
-				SOBRE MIM
+				'ABOUT ME' SECTION
 			-->
-
 
 			<section id="about-me">
 
-				<div class="sobConteudo">
-					<img src="img/pedro-escritorio3.png" alt="Pedro Arevalo">
-					<div>
+				<div class="aboutme_container">
+					<img src="img/pedro-escritorio3.png" alt="Pedro Arevalo" class="pic_col">
+					<div class="main_col">
 						<h2 class="sectTitle">Sobre Mim</h2>
-						<p class="sobText">Me chamo Pedro Arevalo Tamayo, sou desenvolvedor Web em atuação como freelancer, e sou de Boa Vista, Roraima.</p>
-						<p class="sobText">Me adentrei no ramo da criação e manutenção de sites há 1 ano aproximadamente, porém, desde que o fiz, não cesso de estudar constantemente, afim de aprimorar meus conhecimentos e aplicá-los na minha rotina profissional. Neste momento, me especializo no front-side de páginas Web, sempre oferecendo o melhor de mim na execução e entrega de meus serviços</p>
+						<p class="pure_text">Me chamo Pedro Arevalo Tamayo, sou desenvolvedor Web em atuação como freelancer, e sou de Boa Vista, Roraima.</p>
+						<p class="pure_text">Me adentrei no ramo da criação e manutenção de sites há 1 ano aproximadamente, porém, desde que o fiz, não cesso de estudar constantemente, afim de aprimorar meus conhecimentos e aplicá-los na minha rotina profissional. Neste momento, me especializo no front-side de páginas Web, sempre oferecendo o melhor de mim na execução e entrega de meus serviços</p>
 					</div>
 				</div>
 				
@@ -218,23 +219,26 @@
 		</div>
 	</div>
 
-	<footer>
+	<!--
+		CONTACTS SECTION
+	-->
+
+	<footer id="contacts">
 		<div class="container">
 
-			<!--
-				CONTATO
-			-->
-			<section id="contact">
-				<div class="contConteudo">
-					<h2 class="sectTitle_contacts">Contato</h2>
+	
+
+				<div class="contacts_container">
+					<h2 class="sectTitle title">Contato</h2>
 					<ul class="contLista">
 						<li class="contLista_item"><img src="img/whatsapp-small.png"><span class="contatos">(95)99164-2836</span></li>
 						<li class="contLista_item"><img src="img/email-small.png"><span class="contatos">devpedroarevalo@gmail.com</span></li>
 						<li class="contLista_item"><img src="img/linkedin-small.png"><span class="contatos">Pedro Arevalo</span></li>
 					</ul>
 				</div>
-			</section>
-		<p class="footerText">&copy 2021<br/>Pedro Arevalo</p>
+
+			
+			<p class="footerText">&copy 2021<br/>Pedro Arevalo</p>
 		</div>
 	</footer>
 	<script type="text/javascript" src="JS/jqueryComp.js"></script>

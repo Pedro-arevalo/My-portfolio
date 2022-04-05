@@ -6,7 +6,7 @@
 
 /* -------------------------- ALL SCREENS -------------------------- */
 
-.service_container {
+.services_container {
     margin: 0 auto;
     max-width: 600px;
     font-size: 1.3rem;
@@ -29,7 +29,7 @@
 #services .text {
     text-indent: 1.5em;
     margin-top: 1em;
-    margin-bottom: 0.5em;
+
 }
 
 #services .skills_list {
@@ -110,7 +110,7 @@
 
 @media (min-width: 900px) {
 
-    .service_container {
+    .services_container {
         max-width: none;
     }
 
