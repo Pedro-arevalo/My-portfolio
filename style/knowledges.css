@@ -1,5 +1,12 @@
-/*KNOWLEDGES*/
-.knowledgeGrid {
+/*
+========================================================================
+                        KNOWLEDGES SECTION
+========================================================================
+*/
+
+/* -------------------------- ALL SCREENS -------------------------- */
+
+.knowledge_grid {
     display: grid;
     grid-auto-rows: 130px;
     margin: 2em auto 0 auto;
@@ -11,111 +18,130 @@
     padding: 10px;
 }
 
-.gridItem {
+.knowledge_grid .knowledge_card {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     border-radius: 5px;
     padding: 10px;
 }
-.gridItem:hover {
+
+.knowledge_grid .knowledge_card:hover {
     box-shadow: 3px 3px 10px #555;
     transition: 0.5s;
 }
 
-.gridItem-1 {
+.knowledge_grid .knowledge_card:first-of-type {
     grid-column-start: 1;
     grid-column-end: 5;
 }
-.gridItem-2 {
-    grid-column-start: 5;
-    grid-column-end: 9;
-}
-.gridItem-3 {
-    grid-column-start: 1;
-    grid-column-end: 5;
-}
-.gridItem-4 {
-    grid-column-start: 5;
-    grid-column-end: 9;
-}
-.gridItem-5 {
-    grid-column-start: 1;
-    grid-column-end: 5;
-}
-.gridItem-6 {
-    grid-column-start: 5;
-    grid-column-end: 9;
-}
-.gridItem-7 {
-    grid-column-start: 1;
-    grid-column-end: 5;
-}
-.gridItem-8 {
+
+.knowledge_grid .knowledge_card:nth-of-type(2) {
     grid-column-start: 5;
     grid-column-end: 9;
 }
 
-.gridIcons {
+.knowledge_grid .knowledge_card:nth-of-type(3) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.knowledge_grid .knowledge_card:nth-of-type(4) {
+    grid-column-start: 5;
+    grid-column-end: 9;
+}
+
+.knowledge_grid .knowledge_card:nth-of-type(5) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.knowledge_grid .knowledge_card:nth-of-type(6) {
+    grid-column-start: 5;
+    grid-column-end: 9;
+}
+
+.knowledge_grid .knowledge_card:nth-of-type(7) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.knowledge_grid .knowledge_card:nth-of-type(8) {
+    grid-column-start: 5;
+    grid-column-end: 9;
+}
+
+.knowledge_card .card_icon {
     display: block;
     height: 80px;
     margin: 0 auto;
 }
-.knowledgeText {
+
+.knowledge_card .card_label {
     margin-top: 0.5em;
     text-align: center;
     color: #072a2d;
 }
 
+/* -------------------- ABOVE 600 PIXESLS WIDE -------------------- */
+
 @media (min-width: 600px) {
-    /*KNOWLEDGES*/
-    .knowledgeGrid {
+
+    .knowledge_grid {
         grid-template-columns: repeat(12, 1fr);
         grid-row-gap: 40px;
         grid-column-gap: 20px;
         max-width: 600px;
         padding: 0;
     }
-    .gridItem {
+
+    .knowledge_grid .knowledge_card {
         background-color: #ececec;
     }
-    .gridItem-1 {
-        grid-column-start: 1;
-        grid-column-end: 5;
-    }
-    .gridItem-2 {
-        grid-column-start: 5;
-        grid-column-end: 9;
-    }
-    .gridItem-3 {
-        grid-column-start: 9;
-        grid-column-end: 13;
-    }
-    .gridItem-4 {
+
+    .knowledge_grid .knowledge_card:first-of-type {
         grid-column-start: 1;
         grid-column-end: 5;
     }
 
-    .gridItem-5 {
+    .knowledge_grid .knowledge_card:nth-of-type(2) {
         grid-column-start: 5;
         grid-column-end: 9;
     }
-    .gridItem-6 {
+
+    .knowledge_grid .knowledge_card:nth-of-type(3) {
         grid-column-start: 9;
         grid-column-end: 13;
     }
-    .gridItem-7 {
+
+    .knowledge_grid .knowledge_card:nth-of-type(4) {
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+
+    .knowledge_grid .knowledge_card:nth-of-type(5) {
+        grid-column-start: 5;
+        grid-column-end: 9;
+    }
+
+    .knowledge_grid .knowledge_card:nth-of-type(6) {
+        grid-column-start: 9;
+        grid-column-end: 13;
+    }
+
+    .knowledge_grid .knowledge_card:nth-of-type(7) {
         grid-column-start: 3;
         grid-column-end: 7;
     }
-    .gridItem-8 {
+
+    .knowledge_grid .knowledge_card:nth-of-type(8) {
         position: relative;
         grid-column-start: 7;
         grid-column-end: 11;
     }
 
     #git_icon,
-    #git_icon_text {
+    #git_label {
         z-index: 1;
     }
 
@@ -130,19 +156,24 @@
         transform: translateX(-50%) rotate(45deg);
         background-color: #fff;
     }
+
 }
 
+/* -------------------- ABOVE 900 PIXESLS WIDE -------------------- */
+
 @media (min-width: 900px) {
-    /*0-----------600-----900xxxxx
-	KNOWLEDGES*/
-    .knowledgeGrid {
+
+    .knowledge_grid {
         grid-auto-rows: 150px;
         max-width: 800px;
     }
-    .gridItem {
+
+    .knowledge_grid .knowledge_card {
         padding: 15px;
     }
+
     #background_for_git_icon {
         top: 27px;
     }
+
 }
