@@ -1,45 +1,57 @@
-/*FOOTER/CONTACTS*/
+/*
+========================================================================
+                              FOOTER AREA
+========================================================================
+*/
 
-footer#contacts {
+/* -------------------------- ALL SCREENS -------------------------- */
+
+footer {
     background: linear-gradient(to top, #336666, #66cccc 200%);
-    padding-top: 2em;
+    padding: 1em 0;
 }
 
 .contacts_container {
     margin: 0 auto;
     max-width: 500px;
 }
+
 #contacts .title {
     color: #ffff;
 }
-.contLista {
+
+#contacts .list {
     padding: 0;
 }
 
-.contLista_item {
+#contacts .list .item {
     display: flex;
     align-items: center;
 }
 
-.contLista_item + .contLista_item {
+#contacts .list .item + .item {
     margin-top: 0.5em;
 }
 
-span.contatos {
+#contacts .list .item .contact_data {
     font-size: 1.2rem;
     margin-left: 0.5em;
     font-weight: bold;
     color: #fff;
 }
 
-.footerText {
+.footer_text {
     text-align: center;
     font-size: 1rem;
     color: #ddd;
 }
 
+/* -------------------- ABOVE 900 PIXESLS WIDE -------------------- */
+
 @media (min-width: 600px) {
-    .footerText {
+
+    .footer_text {
         margin-top: 3em;
     }
+    
 }
