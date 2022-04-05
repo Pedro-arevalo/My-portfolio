@@ -1,40 +1,52 @@
-/*NAV-BAR*/
-header {
+/*
+========================================================================
+                            NAVIGATION HEADER
+========================================================================
+*/
+
+/* -------------------------- ALL SCREENS -------------------------- */
+
+header#nav {
     font-family: Calibri, sans-serif;
     width: 100%;
     position: fixed;
     background: linear-gradient(to top, #336666, #66cccc 200%);
     z-index: 3;
 }
-.navBar {
+
+#nav .nav_bar {
     padding: 0.2em 0;
     min-height: 90px;
 }
 
-.navLogo {
+#nav .logo {
     position: absolute;
     top: 0.55em;
     left: 0.6em;
 }
-.navList {
+
+#nav .nav_bar .nav_list {
     list-style: none;
     margin: 1em 0 0 40%;
     padding: 0;
 }
-.navList_item + .navList_item {
+
+.nav_list .item + .item {
     margin: 0.3em 0 0 0;
 }
-.navList_itemLink {
+
+.nav_list .item .link {
     text-decoration: none;
     color: #fff;
 }
-.navList_itemLink:hover,
-.navList_itemLink:focus {
+
+.nav_list .item .link:hover,
+.nav_list .item .link:focus {
     outline: none;
     text-decoration: underline;
 }
 
-.navButtonShow-mobile {
+#nav .nav_bar .toggle_nav_button {
     cursor: pointer;
     border: 0;
     width: 3em;
@@ -48,69 +60,88 @@ header {
     right: 15px;
     top: 20px;
 }
-.navButtonShow-mobile:focus,
-.navButtonShow-mobile:hover {
+
+#nav .nav_bar .toggle_nav_button:focus,
+#nav .nav_bar .toggle_nav_button:hover {
     opacity: 0.75;
 }
-.hamburger {
+
+.toggle_nav_button .hamburger {
     width: 50%;
     position: relative;
 }
-.hamburger,
-.hamburger::before,
-.hamburger::after {
+
+.toggle_nav_button .hamburger,
+.toggle_nav_button .hamburger::before,
+.toggle_nav_button .hamburger::after {
     display: block;
     margin: 0 auto;
     height: 3px;
     background: white;
 }
-.hamburger::before,
-.hamburger::after {
+
+.toggle_nav_button .hamburger::before,
+.toggle_nav_button .hamburger::after {
     content: '';
     width: 100%;
 }
-.hamburger::before {
+
+.toggle_nav_button .hamburger::before {
     transform: translateY(-6px);
 }
-.hamburger::after {
+
+.toggle_nav_button .hamburger::after {
     transform: translateY(3px);
 }
 
+
+/* -------------------- ABOVE 600 PIXESLS WIDE -------------------- */
+
 @media (min-width: 600px) {
-    /*NAV-BAR*/
-    header {
+
+    header#nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    .navLogo {
+
+    #nav .logo {
         position: static;
         margin-left: 0.6em;
     }
-    .navButtonShow-mobile {
-        display: none;
-    }
-    .navList {
+
+    #nav .nav_bar .nav_list {
         visibility: visible;
         margin: 1em 1em 1em 0;
         height: auto;
         display: flex;
         justify-content: flex-end;
     }
-    .navList_item + .navList_item {
+
+    .nav_list .item + .item {
         margin: 0 0 0 1em;
     }
+
+    #nav .nav_bar .toggle_nav_button {
+        display: none;
+    }
+
 }
 
+/* -------------------- ABOVE 900 PIXESLS WIDE -------------------- */
+
 @media (min-width: 900px) {
-    /*NAV-BAR*/
-    .navList {
+
+    #nav .nav_bar .nav_list {
         margin: 1em 2em 1em 0;
     }
-    .navLogo {
+
+    #nav .logo {
         margin-left: 1.6em;
     }
-    .navList_item + .navList_item {
+
+    .nav_list .item + .item {
         margin: 0 0 0 2em;
     }
+
 }

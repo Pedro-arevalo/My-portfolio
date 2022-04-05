@@ -7,7 +7,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" href="style/global.css">
-	<link rel="stylesheet" href="style/nav_bar.css">
+	<link rel="stylesheet" href="style/header.css">
 	<link rel="stylesheet" href="style/main_section.css">
 	<link rel="stylesheet" href="style/services.css">
 	<link rel="stylesheet" href="style/portfolio.css">
@@ -23,16 +23,16 @@
 		BARRA DE NAVEGAÇÃO FIXA
 	-->
 	<div id="all"> <!--Analisar se esse tag é necessário-->
-		<header>
-			<img src="img/logo-v2.png" width="220" height="65" alt="logo" class="navLogo">
-			<nav class="navBar">
-				<ul class="navList">
-					<li class="navList_item"><a href="#main" class="navList_itemLink">Home</a></li>
-					<li class="navList_item"><a href="#services" class="navList_itemLink">Serviços</a></li>
-					<li class="navList_item"><a href="#about-me" class="navList_itemLink">Sobre</a></li>
-					<li class="navList_item"><a href="#contact" class="navList_itemLink">Contato</a></li>
+		<header id="nav">
+			<img src="img/logo-v2.png" class="logo" width="220" height="65" alt="logo">
+			<nav class="nav_bar">
+				<ul class="nav_list">
+					<li class="item"><a href="#main" class="link">Home</a></li>
+					<li class="item"><a href="#services" class="link">Serviços</a></li>
+					<li class="item"><a href="#about-me" class="link">Sobre</a></li>
+					<li class="item"><a href="#contact" class="link">Contato</a></li>
 				</ul>
-				<button id="navButton" class="navButtonShow-mobile">
+				<button id="toggle_nav_button" class="toggle_nav_button">
 					<span class="hamburger"></span>
 				</button>
 			</nav>
@@ -76,7 +76,7 @@
 							<p class="text">
 								Além de ter uma base sólida de programação em
 								JavaScript, também me especializei
-								nas aplicabilidades fundamentais do CSS: 
+								em aplicabilidades fundamentais do CSS: 
 							</p>
 
 
