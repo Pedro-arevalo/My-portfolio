@@ -1,12 +1,17 @@
-.cardContainer {
-    margin-bottom: 2em;
-    margin-top: 1.5em;
+/*
+========================================================================
+                            PORTFOLIO SECTION
+========================================================================
+*/
+
+/* -------------------------- ALL SCREENS -------------------------- */
+
+#portfolio .card_container {
+    margin: 2em auto;
     max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.card {
+#portfolio .card_container .card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -18,21 +23,21 @@
     min-height: 340px;
 }
 
-.card + .card {
+#portfolio .card_container .card + .card {
     margin-top: 1em;
 }
 
-.card h5 {
+.card .card_spec .title {
     margin: 1em 0 0 0;
 }
 
-.card p {
+.card .card_spec .text {
     color: rgba(255, 255, 255, 0.76);
     margin: 0.5em 0 1em 0;
     font-size: 1rem;
 }
 
-.card button {
+.card .card_button {
     background-color: orange;
     border: none;
     padding: 0.5em 1.2em;
@@ -44,23 +49,28 @@
     cursor: pointer;
 }
 
-.card button:hover,
-.card button:focus {
+.card .card_button:hover,
+.card .card_button:focus {
     outline: none;
     opacity: 0.8;
 }
 
+/* -------------------- ABOVE 600 PIXESLS WIDE -------------------- */
+
 @media (min-width: 600px) {
-    .cardContainer {
+
+    #portfolio .card_container {
         display: flex;
         justify-content: space-between;
         max-width: none;
     }
-    .card {
+
+    #portfolio .card_container .card {
         width: 48%;
     }
 
-    .card + .card {
+    #portfolio .card_container .card + .card {
         margin-top: 0;
     }
+
 }
