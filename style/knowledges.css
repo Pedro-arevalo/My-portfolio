@@ -15,7 +15,6 @@
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     max-width: 420px;
-    padding: 10px;
 }
 
 .knowledge_grid .knowledge_card {
@@ -92,7 +91,6 @@
         grid-row-gap: 40px;
         grid-column-gap: 20px;
         max-width: 600px;
-        padding: 0;
     }
 
     .knowledge_grid .knowledge_card {

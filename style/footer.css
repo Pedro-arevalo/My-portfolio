@@ -8,6 +8,7 @@
 
 footer {
     background: linear-gradient(to top, #336666, #66cccc 200%);
+    margin-top: 2em;
     padding: 1em 0;
 }
 

@@ -1,29 +1,39 @@
-/*GLOBAL*/
+/*
+========================================================================
+                            GLOBAL ELEMENTS
+========================================================================
+*/
+
+/* -------------------------- ALL SCREENS -------------------------- */
+
 html {
     scroll-behavior: smooth;
 }
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
+
 @font-face {
     font-family: Eurostile Bold;
     src: url('fonts/EurostileBold.ttf');
 }
+
 @font-face {
     font-family: Roboto;
     src: url('fonts/Roboto-Regular.ttf');
 }
 
 body {
-    font-family: Roboto, sans-serif;
     margin: 0;
+    font-family: Roboto, sans-serif;
     font-size: 1.4rem;
 }
 
-section {
-    padding: 1em 0 0 0;
+img {
+    max-width: 100%;
 }
 
 .container {
@@ -32,13 +42,18 @@ section {
     padding: 0 1em;
 }
 
+section {
+    padding: 1em 0 0 0;
+}
+
 h1,
 h2,
 h3,
 h4 {
     margin: 0;
 }
-.sectTitle {
+
+.section_title {
     font-family: Eurostile Bold, sans-serif;
     text-align: center;
     font-size: 2.5rem;
@@ -49,12 +64,10 @@ h4 {
 .pure_text {
     text-indent: 1.5em;
     margin-top: 1em;
+    margin-bottom: 0;
 }
 
-img {
-    max-width: 100%;
-}
-.divisoria {
+.section_divider {
     background: #cecece;
     border: none;
     height: 2px;
@@ -62,6 +75,7 @@ img {
     margin: 2em auto 1em auto;
     border-radius: 50%;
 }
+
 #iframeDiv {
     position: fixed;
     z-index: 2;
@@ -97,15 +111,18 @@ button.closeIframe:focus {
     text-decoration: underline;
 }
 
+/* -------------------- ABOVE 900 PIXESLS WIDE -------------------- */
+
 @media (min-width: 900px) {
-    /*0-----------600-----900xxxxx
-	GLOBAL*/
+
     section {
         padding: 2em 0 0 0;
     }
+
     .container {
         padding: 0 2em;
     }
+
     .row {
         display: flex;
         justify-content: space-between;
@@ -116,5 +133,3 @@ button.closeIframe:focus {
         margin-left: 2em;
     }
 }
-
-/* PORTFOLIO*/
