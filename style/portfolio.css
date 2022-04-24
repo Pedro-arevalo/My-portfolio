@@ -16,15 +16,14 @@
 }
 
 .card_container .card {
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    justify-content: space-between; */
-    background-color: #093338d3;
+    justify-content: space-between;
+    background-color: rgba(9, 51, 56, 0.8);
     padding: .7em;
     border-radius: 5px;
     color: #fff;
     text-align: center;
-    /* min-height: 340px; */
 }
 
 .card_container .card:first-of-type,
@@ -48,30 +47,69 @@
     font-size: 1rem;
 }
 
-.card .card_button {
-    background-color: orange;
-    border: none;
-    padding: 0.5em 1.2em;
-    font-weight: bold;
-    font-family: 'Eurostile Bold';
-    font-size: 1.2rem;
-    margin: 0 auto;
-    display: block;
-    cursor: pointer;
-}
-
 .card .card_button:hover,
 .card .card_button:focus {
     outline: none;
     opacity: 0.8;
 }
 
+.card .button_group {
+    display: flex;
+    justify-content: center;
+
+}
+
+.button_group a {
+    display: flex;
+    align-items: center;
+    background-color: rgb(33, 135, 153);
+    text-decoration: none;
+    padding: .2em;
+    border-radius: 2px;
+    color: #fff;
+}
+
+.button_group button {
+    background-color: orange;
+    border: none;
+    padding: .5em;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+    margin-left: .7em;
+    cursor: pointer;
+}
+
+.button_group span {
+    font-weight: bold;
+    margin-left: .5em;
+    font-size: .8rem;
+}
+
+
 /* -------------------- ABOVE 600 PIXESLS WIDE -------------------- */
 
 @media (min-width: 600px) {
-
-    #portfolio .card_container .card + .card {
-        margin-top: 0;
+    #portfolio .card_container {
+        max-width: 600px;
+    }
+    .card_container .card:first-of-type {
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+    .card_container .card:nth-of-type(2) {
+        grid-column-start: 5;
+        grid-column-end: 9;
+    }
+    .card_container .card:nth-of-type(3) {
+        grid-column-start: 3;
+        grid-column-end: 7;
     }
 
+}
+
+@media (min-width: 900px) {
+    #portfolio .card_container {
+        max-width: 800px;
+    }
 }
