@@ -85,7 +85,41 @@
     margin-left: .5em;
     font-size: .8rem;
 }
+/* ========================== */
+.action_buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+.action_buttons .button {
+    display: flex;
+    align-items: center;
+    padding: .5em;
+    font-weight: bold;
+    font-size: .8rem;
+    border-radius: 2px;
+}
 
+.action_buttons .button + .button{
+    margin-left: .5em;
+}
+
+.action_buttons a.access_link {
+    text-decoration: none;
+    background-color: rgb(33, 135, 153);
+    color: #fff;
+}
+
+.action_buttons button.full_screen {
+    background-color: orange;
+    border: none;
+    cursor: pointer;
+}
+
+a.access_link .label,
+button.full_screen .label {
+    margin-left: .5em;
+}
 
 /* -------------------- ABOVE 600 PIXESLS WIDE -------------------- */
 
