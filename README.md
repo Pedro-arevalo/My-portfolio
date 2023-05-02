@@ -1,3 +1,2 @@
 # My-portfolio
- Portfólio contendo informações profissionais e trabalhos concluidos.
- Contém dados de contato.
+ Portfólio contendo informações profissionais e meus principais projetos concluidos.
